@@ -6,10 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title> <!-- wymyslic tytul-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="menu"></nav>
-    <section class="hero"></section>
+    <nav class="menu">
+        <label class="menu__label" for="menu__switch"><i class="fas fa-bars fa-lg"></i></label>
+        <input type="checkbox" id="menu__switch" class="menu__switch" aria-label="whatever"/>
+        <section class="menu__container"> 
+            <ul class="navList">
+                <li class="navList__element"><a href="#hero">Hero</a></li>
+                <li class="navList__element"><a href="#functions">Funkcje</a></li>
+                <li class="navList__element"><a href="#team">Nasz zespół</a></li>
+                <li class="navList__element"><a href="#ctcForm">Premiera</a></li>
+            </ul>
+        </section>
+    </nav>
+    <section class="hero" id="hero"></section>
     <main>
         <!-- spis planowanych funkcji - ponizej-->
          <!-- informacje o zespole - ponizej-->

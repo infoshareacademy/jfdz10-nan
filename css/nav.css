@@ -1,0 +1,56 @@
+.menu{
+  position: fixed;
+  height: 6vh;
+  width: 100vw;
+  background-color: #00555C;
+}
+
+.menu__label{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  padding: 0 4vw;
+}
+
+.menu__switch{
+  display: none;
+}
+
+.menu__container{
+  width: inherit;
+}
+
+.navList{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+}
+
+.navList__element{
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(255, 255, 255, 1);
+  height: 60%;
+}
+
+@media (min-width: 1024px){
+  .navList{
+    margin-left: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .navList__element{  
+    width: 25%;
+  }
+  .menu__container{
+    width: 50vw;
+    height: 100%;
+  }
+}
