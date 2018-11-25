@@ -1,37 +1,34 @@
 .hero {
     background-image: url('/fotos/krystian-tambur-101318-unsplash.jpg');
     background-size: cover;
-    height: 100%;
+    background-position: right top;
+    height: 100vh;
     width: 100%;
-    padding: 2rem 0 0 2rem;
+    color: #fff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+
+  .hero__container{
+    height: 100%;
+    padding: 45vh 50vw 20vh 7vw;
+
   }
   
   .hero__headline {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 1;
-    margin: 0;
-    color: #fff;
+    margin: inherit;
     font-size: 4rem;
+    font-weight: 300;
   }
 
   .hero__logo {
-    margin: 2% 0 0 7%;
-    height: 100px;
+    margin: 4vh 0;
+    height: 150px;
+    width: auto;
     }
 
   .hero__text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding-top: 7vw;
-    color: #fff;
-    font-size: 1.5rem;
-  }
-
-  .hero__button {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid;
-    margin-top: 2rem;
+    margin: inherit;
+    font-size: 3rem;
   }
