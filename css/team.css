@@ -22,8 +22,7 @@
 
 .teamPhoto{
     border-radius: 50%;
-    max-width: 100%;
-    min-width: 100%;
+    width: 100%;
 }
 
 .team__title{
@@ -35,6 +34,16 @@
 }
 
 /* grid setup */
+@media screen and (min-width: 465px){
+    .team__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+}
+
 @media screen and (min-width: 760px){
     .team__wrapper{
         display: grid;
@@ -44,6 +53,7 @@
         max-width: 1080px;
     }
 }
+
 
 
 
