@@ -5,25 +5,14 @@
     width: 100%;
 }
 
-.team__description{
+.teamDescription{
     color: #324B4C;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     text-align: center;
 }
 
-/* grid setup */
-@media screen and (min-width: 760px){
-    .team__wrapper{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 1080px;
-    }
-}
-
-.team__name{
+.teamName{
     color: #324B4C;
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
@@ -31,7 +20,7 @@
     text-transform: capitalize;
 }
 
-.team__photo{
+.teamPhoto{
     border-radius: 50%;
     max-width: 100%;
     min-width: 100%;
@@ -45,6 +34,16 @@
     text-transform: uppercase;
 }
 
+/* grid setup */
+@media screen and (min-width: 760px){
+    .team__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+}
 
 
 
