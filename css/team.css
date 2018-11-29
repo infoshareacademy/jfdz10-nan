@@ -10,6 +10,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     text-align: center;
+    padding: 0 auto;
 }
 
 .teamName{
@@ -38,7 +39,6 @@
     .team__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 2fr);
-        justify-content: center;
         margin: 0 auto;
         max-width: 1080px;
     }
@@ -48,7 +48,6 @@
     .team__wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        justify-content: center;
         margin: 0 auto;
         max-width: 1080px;
     }
