@@ -1,37 +1,100 @@
 .hero {
-    background-image: url('/fotos/krystian-tambur-101318-unsplash.jpg');
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    padding: 2rem 0 0 2rem;
-  }
-  
-  .hero__headline {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 1;
-    margin: 0;
-    color: #fff;
-    font-size: 4rem;
+  background-image: url('/fotos/krystian-tambur-101318-unsplash.jpg');
+  background-size: cover;
+  background-position-x: 82%;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.heroContainer {
+  padding: 62vh 0 0 0;
+  text-align: center;
+}
+
+.heroHeadline {
+  font-size: 2.2rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.heroLogo {
+  height: 10vh;
+  margin-block-start: 0.7rem;
+  margin-block-end: 0.5rem;
   }
 
-  .hero__logo {
-    margin: 2% 0 0 7%;
-    height: 100px;
-    }
+.heroText {
+  font-size: 1.1rem;
+  font-weight: 100;
+  margin: 0;
+}
 
-  .hero__text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding-top: 7vw;
-    color: #fff;
-    font-size: 1.5rem;
+/* grid setup */
+@media screen and (min-width: 465px){
+
+.heroHeadline {
+font-size: 2.4rem;
+}
+
+.heroLogo {
+height: 11vh;
+}
+
+.heroText {
+font-size: 1.3rem;
+}
+}
+
+@media screen and (min-width: 760px){
+
+.hero {
+  background-position: right top;
+}
+
+.heroContainer {
+  padding: 41vh 0 0 3vw;
+  text-align: left;
+}
+
+.heroHeadline {
+  font-size: 3rem;
+}
+
+.heroLogo {
+  height: 90px;
+  margin-block-start: 1.3rem;
+  margin-block-end: 0.9rem;
   }
 
-  .hero__button {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid;
-    margin-top: 2rem;
+.heroText {
+  font-size: 1.8rem;
+}
+}
+
+@media screen and (min-width: 760px) and (orientation: portrait){
+
+.heroContainer {
+  padding: 66vh 0 0 0;
+  text-align: center;
+}
+}
+
+@media screen and (min-width: 1024px){
+
+.heroHeadline {
+  font-size: 3.7rem;
+}
+
+.heroLogo {
+  height: 110px;
+  margin-block-start: 1.3rem;
+  margin-block-end: 0.9rem;
   }
+
+.heroText {
+  font-size: 2.4rem;
+}
+}
