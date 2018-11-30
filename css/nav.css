@@ -4,9 +4,8 @@
 
 .menu{
   position: fixed;
-  height: 6vh;
+  height: 10vh;
   width: 100vw;
-  z-index: 2;
 }
 
 .menu__label img{
@@ -30,13 +29,13 @@
 }
 
 .menu__switch:checked ~ .menu__container{
-  top: 6vh;
+  top: 10vh;
   opacity: 1;
 }
 
 .menu__container{
   position:fixed;
-  top: -6vh;
+  top: -20vh;
   left: 0;
   width: 100%;
   transition: .5s all ease-in-out;
@@ -60,9 +59,17 @@
   margin: 2vh;
 }
 
-@media (min-width: 1024px){
-  .menu__label{
+@media (min-width: 768px){
+  .menu{
+    height: 6vh;
+  }
+
+  .menu__label i{
     display: none;
+  }
+
+  .menu__label{
+    z-index: 1;
   }
 
   .navList{
