@@ -3,67 +3,68 @@
   background-size: cover;
   background-position-x: 82%;
   height: 100%;
-  width: 100%;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
 }
 
 .heroContainer {
-  padding: 50vh 0 0 0;
+  padding-top: 50vh;
   text-align: center;
 }
 
 .heroHeadline {
   font-size: 2.2rem;
   font-weight: 100;
-  margin: 0;
 }
 
 .heroLogo {
-  height: 10vh;
-  margin-block-start: 0.7rem;
-  margin-block-end: 0.5rem;
+  height: 55px;
+  margin-top: 0.7rem;
+  margin-bottom: 0.5rem;
 }
 
 .heroText {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 100;
-  margin: 0;
 }
-
-/* grid setup */
 
 @media screen and (min-width: 465px) {
   .heroHeadline {
     font-size: 2.4rem;
   }
+
   .heroLogo {
-    height: 11vh;
+    height: 72px;
   }
+
   .heroText {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
+
 }
 
 @media screen and (min-width: 760px) {
   .hero {
     background-position: right top;
   }
+
   .heroContainer {
     padding: 41vh 0 0 3vw;
     text-align: left;
   }
+
   .heroHeadline {
     font-size: 3rem;
   }
+
   .heroLogo {
     height: 90px;
-    margin-block-start: 1.3rem;
-    margin-block-end: 0.9rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.9rem;
   }
+
   .heroText {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
+
 }
 
