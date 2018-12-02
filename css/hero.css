@@ -10,7 +10,7 @@
 }
 
 .heroContainer {
-  padding: 62vh 0 0 0;
+  padding: 50vh 0 0 0;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
   height: 10vh;
   margin-block-start: 0.7rem;
   margin-block-end: 0.5rem;
-  }
+}
 
 .heroText {
   font-size: 1.1rem;
@@ -33,68 +33,37 @@
 }
 
 /* grid setup */
-@media screen and (min-width: 465px){
 
-.heroHeadline {
-font-size: 2.4rem;
-}
-
-.heroLogo {
-height: 11vh;
-}
-
-.heroText {
-font-size: 1.3rem;
-}
-}
-
-@media screen and (min-width: 760px){
-
-.hero {
-  background-position: right top;
-}
-
-.heroContainer {
-  padding: 41vh 0 0 3vw;
-  text-align: left;
-}
-
-.heroHeadline {
-  font-size: 3rem;
-}
-
-.heroLogo {
-  height: 90px;
-  margin-block-start: 1.3rem;
-  margin-block-end: 0.9rem;
+@media screen and (min-width: 465px) {
+  .heroHeadline {
+    font-size: 2.4rem;
   }
-
-.heroText {
-  font-size: 1.8rem;
-}
-}
-
-@media screen and (min-width: 760px) and (orientation: portrait){
-
-.heroContainer {
-  padding: 66vh 0 0 0;
-  text-align: center;
-}
-}
-
-@media screen and (min-width: 1024px){
-
-.heroHeadline {
-  font-size: 3.7rem;
-}
-
-.heroLogo {
-  height: 110px;
-  margin-block-start: 1.3rem;
-  margin-block-end: 0.9rem;
+  .heroLogo {
+    height: 11vh;
   }
+  .heroText {
+    font-size: 1.3rem;
+  }
+}
 
-.heroText {
-  font-size: 2.4rem;
+@media screen and (min-width: 760px) {
+  .hero {
+    background-position: right top;
+  }
+  .heroContainer {
+    padding: 41vh 0 0 3vw;
+    text-align: left;
+  }
+  .heroHeadline {
+    font-size: 3rem;
+  }
+  .heroLogo {
+    height: 90px;
+    margin-block-start: 1.3rem;
+    margin-block-end: 0.9rem;
+  }
+  .heroText {
+    font-size: 1.8rem;
+  }
 }
-}
+
