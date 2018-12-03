@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('/fotos/krystian-tambur-101318-unsplash.jpg');
+  background-image: url(../fotos/cat_background.jpg);
   background-size: cover;
   background-position-x: 82%;
   height: 100%;
@@ -14,6 +14,7 @@
 .heroHeadline {
   font-size: 2.2rem;
   font-weight: 100;
+  margin: 0;
 }
 
 .heroLogo {
@@ -25,9 +26,11 @@
 .heroText {
   font-size: 1.2rem;
   font-weight: 100;
+  margin: 0;
 }
 
 @media screen and (min-width: 465px) {
+
   .heroHeadline {
     font-size: 2.4rem;
   }
@@ -43,6 +46,7 @@
 }
 
 @media screen and (min-width: 760px) {
+
   .hero {
     background-position: right top;
   }
