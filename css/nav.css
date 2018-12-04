@@ -4,7 +4,7 @@
 
 .menu{
   position: fixed;
-  height: 10vh;
+  height: 40px;
   width: 100vw;
 }
 
@@ -21,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   color: #ffffff;
-  padding: 0 4vw;
+  padding: 0 10px;
 }
 
 .menu__switch{
@@ -29,13 +29,13 @@
 }
 
 .menu__switch:checked ~ .menu__container{
-  top: 10vh;
+  top: 40px;
   opacity: 1;
 }
 
 .menu__container{
   position:fixed;
-  top: -20vh;
+  top: -120px;
   left: 0;
   width: 100%;
   transition: .5s all ease-in-out;
@@ -55,13 +55,13 @@
 .navList__element{
   font-family: 'Montserrat', sans-serif;
   color: rgba(255, 255, 255, 1);
-  height: 60%;
-  margin: 2vh;
+  height: 20px;
+  margin: 5px;
 }
 
 @media (min-width: 768px){
   .menu{
-    height: 6vh;
+    height: 50px;
   }
 
   .menu__label i{
@@ -70,6 +70,7 @@
 
   .menu__label{
     z-index: 1;
+    padding: 0 20px;
   }
 
   .navList{
@@ -99,6 +100,4 @@
     margin-left: 50vw;
     height: inherit;
   }
-
-
 }
