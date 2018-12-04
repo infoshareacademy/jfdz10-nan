@@ -1,6 +1,6 @@
 /* background */
 .function{
-    background: url(/fotos/cat-grey.png) no-repeat;
+    background: url(../fotos/cat-grey.png) no-repeat;
     background-position: left;
     background-size: cover;
     padding: 2vh 2vw;
