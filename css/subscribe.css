@@ -1,9 +1,36 @@
 .subscribe{
-
+    display: block;
+    min-height: 40vh;
+   
 }
 
-.subscribeBackground{
+.subscribeWrapper{
+    background-color: brown;
+    position: relative;
+    display: flex;
+    min-height: 35vh;
+}
 
+
+
+.subscribeForm{
+    background-color: blue;
+    width: 65%;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    min-height: 70%;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,1)
+       
+}
+
+
+.subscribeForm h2{
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .subscribeInput{
@@ -17,3 +44,5 @@
 .subscribeReset{
 
 }
+
+
