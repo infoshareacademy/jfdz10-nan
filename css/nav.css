@@ -4,7 +4,7 @@
 
 .menu{
   position: fixed;
-  height: 40px;
+  height: 50px;
   width: 100vw;
 }
 
@@ -22,6 +22,7 @@
   align-items: center;
   color: #ffffff;
   padding: 0 10px;
+  border-bottom: 10px solid #B66D49;
 }
 
 .menu__switch{
@@ -29,7 +30,7 @@
 }
 
 .menu__switch:checked ~ .menu__container{
-  top: 40px;
+  top: 50px;
   opacity: 1;
 }
 
@@ -61,7 +62,8 @@
 
 @media (min-width: 768px){
   .menu{
-    height: 50px;
+    height: 65px;
+    border-bottom: 15px;
   }
 
   .menu__label i{
@@ -98,6 +100,6 @@
     opacity: 1;
     width: 50vw;
     margin-left: 50vw;
-    height: inherit;
+    height: 50px;
   }
 }
