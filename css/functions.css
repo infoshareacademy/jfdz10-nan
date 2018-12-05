@@ -8,7 +8,6 @@
 
 .function__description{
     color: #324B4C;
-    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     text-align: center;
 }
@@ -20,7 +19,6 @@
 
 .function__icon{
     max-width: 70%;
-    min-width: 70%;
 }
 
 .function__title{
@@ -39,7 +37,6 @@
     .function__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 2fr);
-        justify-content: center;
         margin: 0 auto;
         max-width: 1080px;
     }
@@ -49,7 +46,6 @@
     .function__wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        justify-content: center;
         margin: 0 auto;
         max-width: 1080px;
     }
