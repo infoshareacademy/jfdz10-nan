@@ -1,0 +1,59 @@
+/* background */
+.function{
+    background: url(../fotos/cat-grey.png) no-repeat;
+    background-position: left;
+    background-size: cover;
+    padding: 2vh 2vw;
+}
+
+.function__description{
+    color: #324B4C;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.function__container {
+    display: block;
+    text-align: center;
+}
+
+.function__icon{
+    max-width: 70%;
+}
+
+.function__title{
+    color: #324B4C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/************************/
+/*   media queries     */
+/**********************/
+
+@media screen and (min-width: 465px){
+    .function__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+}
+
+@media screen and (min-width: 760px){
+    .function__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+}
+
+
+
+
+
+
+
