@@ -1,48 +1,85 @@
 .subscribe{
     display: block;
-    min-height: 40vh;
-   
+    min-height: 48vh;
+    max-height: 54vh;
 }
 
+
 .subscribeWrapper{
-    background-color: brown;
+    background-color: #B66D49;
     position: relative;
-    display: flex;
-    min-height: 35vh;
+    display: block;
+    min-height: 48vh;
+    max-height: 54vh;
+    z-index: -2;
+
+}
+
+.subscribeWrapper img{
+    position: relative;
+    left: 68vw;
+    width: 35%;
+    transform: rotate(-30deg);position: relative;
+    z-index: -1;
+    clip: inherit;
+    clip-path: inset(0px 10px 0px 0px);
 }
 
 
 
 .subscribeForm{
-    background-color: blue;
-    width: 65%;
+    background-color: #00C8CD;
+    width: 60%;
     position: absolute;
     left: 0px;
-    top: 40px;
-    min-height: 70%;
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,1)
+    top: 15%;
+    bottom: 15%;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    padding-left: 10%;
        
 }
 
 
 .subscribeForm h2{
     color: #ffffff;
-    font-size: 2em;
-    font-weight: 100;
-    text-align: center;
+    font-family: inherit;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align:  left;
     text-transform: uppercase;
 }
 
-.subscribeInput{
+.subscribeForm span{
+    display: block;
+    padding: 10 0px;
+    
+}
 
+.subscribeInput{
+    height: 4.5vh;
+    width: 40%;
+    border: inset 2px;
+    border-color: #ffffff;
+    box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.5);
+    padding: 0 5px;
 }
 
 .subscribeSubmit{
-
+    color: #ffffff;
+    background-color: #324B4C;
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    font-family: inherit;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 8px 28px;
+    text-transform: uppercase;
+    position: relative;
+    top: 13vh;
+    left: -20vw;
+    
 }
 
-.subscribeReset{
-
-}
 
 
