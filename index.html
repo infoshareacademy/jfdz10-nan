@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> <!-- wymyslic tytul-->
+    <title>Cat4you</title> <!-- wymyslic tytul-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/functions.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="menu">
-        <label class="menu__label" for="menu__switch">
-            
+  <nav class="menu">
+      <label class="menu__label" for="menu__switch">  
             <!--Cat4You navigation logo-->
-            <img src="logo/cat4you-logo-white.png" alt="cat4you logo" />
+          <img src="logo/cat4you-logo-white.png" alt="cat4you logo" />
             <!--Menu Icon for Mobile-->
             <i class="fas fa-bars fa-lg"></i>
         </label>
@@ -26,18 +29,118 @@
             <!--List container-->
             <ul class="navList">
                 <li class="navList__element"><a href="#hero">Hero</a></li>
-                <li class="navList__element"><a href="#functions">Funkcje</a></li>
+                <li class="navList__element"><a href="#function">Funkcje</a></li>
+                <li class="navList__element"><a href="#contact">Premiera</a></li>
                 <li class="navList__element"><a href="#team">Nasz zespół</a></li>
-                <li class="navList__element"><a href="#ctcForm">Premiera</a></li>
             </ul>
         </section>
     </nav>
-    <section class="hero" id="hero"></section>
+    <section class="hero" id="hero">
+        <div class="heroContainer">
+           <h1 class="heroHeadline">Witamy w</h1>
+           <img class="heroLogo" src="fotos/cat4you-logo-white.png" alt="logo">
+           <p class="heroText">Marzysz o kocie, <br>ale nie wiesz jaką rasę wybrać?<br> Pomożemy Ci dokonać właściwego wyboru.</p>
+        </div> 
+   </section>
     <main>
         <!-- spis planowanych funkcji - ponizej-->
+
+        <section class="function" id="function">
+            <h2 class="function__title">Chcemy Ci zaoferować</h2>
+            <div class="function__wrapper">
+
+                <!-- Function 1 -->
+                <figure class="function__container">
+                    <img class="function__icon" src="icons/magnifying-glass.svg" alt="icon-search">
+                    <figcaption>
+                        <p class="function__description">Największą bazę ras kotów dostępną na rynku wraz z ich szczegółowymi opisami.</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Function 2 -->
+                <figure class="function__container">
+                    <img class="function__icon" src="icons/love.svg" alt="icon-you">
+                    <figcaption>
+                        <p class="function__description">Dopasowanie rasę kota specjalnie pod Twoje upodobania, styl życia i charakter.</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Function 3 -->
+                <figure class="function__container">
+                    <img class="function__icon" src="icons/pet-food.svg" alt="icon-pet-food">
+                    <figcaption>
+                        <p class="function__description">Zapewniamy dobór karmy i innych akcesoriów specjalnie pod wybraną dla Ciebie rasę.</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Function 4 -->
+                <figure class="function__container">
+                    <img class="function__icon" src="icons/volunteer.svg" alt="icon-breeder">
+                    <figcaption>
+                        <p class="function__description">Oferujemy bezpośredni kontakt wyłącznie ze sprawdzonymi hodowcami.</p>
+                    </figcaption>
+                </figure>
+                
+            </div>
+        </section>
+
          <!-- informacje o zespole - ponizej-->
           <!-- zapis na premiere-ponizej-->
+
+        <section class="team" id="team">
+            <h2 class="team__title">Poznaj nasz zespół</h2>
+            <div class="team__wrapper">
+
+                <!-- Person 1 -->
+                <figure class="teamMember">
+                    <img class="teamPhoto" src="https://www.placecage.com/480/480" alt="team-member-photo">
+                    <figcaption>
+                        <h3 class="teamName"><strong>Błażej</strong></h3>
+                        <p class="teamDescription">Choć sam nie mam kota, to koci świat stanowi dla mnie pole do fascyjnujących obserwacji zachowań zwierząt. Głęboko wierzę, że dobór rasy kota z pełną świadomością wszystkich jego cech, będzie stanowił początek wspaniałej wspólnej przygody człowieka i zwierzęcia.</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Person 2 -->
+                <figure class="teamMember">
+                    <img class="teamPhoto" src="https://www.placecage.com/c/480/480" alt="team-member-photo">
+                    <figcaption>
+                        <h3 class="teamName"><strong>Magda</strong></h3>
+                        <p class="teamDescription">Mówi się, że koty chodzą swoimi drogami, ja zaś twierdzę, że na każdego kota można znaleźć sposób, o ile trafi on na odpowiedniego opiekuna, a opiekun - na odpowiedniego kota. Ufam, że w osiągnięciu tego celu pomoże szeroka wiedza z zakresu specyfiki poszczególnych kocich ras, którą znaleźć można na naszej stronie.</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Person 3 -->
+                <figure class="teamMember">
+                    <img class="teamPhoto" src="https://www.placecage.com/g/480/480" alt="team-member-photo">
+                    <figcaption>
+                        <h3 class="teamName"><strong>Mateusz</strong></h3>
+                        <p class="teamDescription">Właściciel puszystego Brytyjczyka, w tym wypadku był to strzał w dziesiątkę i miłość od pierwszego wejrzenia. Ale po co ryzykować? Z nami znajdziesz idealnego kociego kompana, dopasowanego do twojego charakteru.</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Person 4 -->
+                <figure class="teamMember">
+                    <img class="teamPhoto" src="https://www.placecage.com/gif/480/480" alt="team-member-photo">
+                    <figcaption>
+                        <h3 class="teamName"><strong>Owca</strong></h3>
+                        <p class="teamDescription">Zakochana w CSS'ie i zwierzętach. Uważa, że dokładne dopasowanie pupila do właściciela jest niesamowicie ważne dla szczęścia obu stron. Jednym z jej mniejszych celów życiowych jest uświadamianie ludzi o prawidłowej opiece nad zwierzętami.</p>
+                    </figcaption>
+                </figure>
+                
+            </div>
+        </section>
+
     </main>
-    <footer></footer>
+    <footer class="page__footer">
+        <div class="footer__rights">Wszelkie prawa zastrzeżone Cat4you.</div>
+        <div class="footer__social">
+            <a class="social__icon" href="https://www.facebook.com/#">
+                <img src="icons/facebook_icon.svg" alt="Facebook profile">
+            </a>
+            <a class="social__icon" href="https://twitter.com/#">
+                <img src="icons/twitter_icon.svg" alt="Twitter profile">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
