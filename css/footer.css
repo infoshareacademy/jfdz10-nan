@@ -11,7 +11,7 @@
   
   }
   .footer__rights {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   
   .social__icon {
@@ -36,9 +36,9 @@
         flex-direction: row;
         justify-content: space-between;
       }
-
+      
       .footer__rights {
-        padding-bottom: 0;
+        padding: 5px 0;
       }
       
   }
