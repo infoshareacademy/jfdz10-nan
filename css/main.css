@@ -10,31 +10,5 @@ body, html {
     box-sizing: border-box;
   }
 
-.page__footer {
-  background:#B66D49;
-  border-top-width: 15px;
-  border-top-color:#00C8CD;
-  border-top-style: solid;
-  color: white;
-  padding: 1vw;
-  margin-top: 3vh;
-  text-align: center;
-  display: block;
 
-}
-.footer__rights {
-  padding: 2vh;
-}
-
-.footer__social {
-  padding-bottom: 2vh;
-}
-
-.social__icon img {
-  height: 30px;
-  width: 30px;
-  max-width: 40px;
-  max-width: 40px;
-  margin: 0 10px;
-}
 
