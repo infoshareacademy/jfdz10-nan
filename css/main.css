@@ -23,19 +23,3 @@ a{
 a:hover, a:hover, a:visited{
   color: inherit;
 }
-
-.footer__rights {
-  padding: 2vh;
-}
-
-.footer__social {
-  padding-bottom: 2vh;
-}
-
-.social__icon img {
-  height: 30px;
-  width: 30px;
-  max-width: 40px;
-  max-width: 40px;
-  margin: 0 10px;
-}
