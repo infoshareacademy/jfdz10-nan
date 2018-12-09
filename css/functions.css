@@ -33,7 +33,7 @@
 /*   media queries     */
 /**********************/
 
-@media screen and (min-width: 465px){
+@media screen and (min-width: 425px){
     .function__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 2fr);
@@ -42,7 +42,7 @@
     }
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 768px){
     .function__wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);

@@ -1,21 +1,26 @@
 
 .subscribe{
     background-color: #B66D49;
-    position: relative;
     min-height: 30vw;
-    overflow: hidden;
-
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: space-around;
 }
 
-.subscribe img{
-    position: relative;
-    left: 63vw;
-    width: 36vw;
-    max-width: 100%;
+.subscribeImgWrapper{
+    right: 0;
+    width: 40%;
+    height: 30vw;
+    display: flex;
+}
+
+.subscribeImgWrapper img{
+    width: 100%;
     height: auto;
-    padding: 0 0;
     opacity: 0.1;
 }
+
+
 
 .subscribeContainer{
     display: flex;
@@ -33,21 +38,19 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 60%;
-    position: absolute;
+    height: 20vw;
     left: 0px;
-    top: 15%;
-    bottom: 15%;
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
     padding-left: 10%;
     padding-right: 5%;
-       
+    align-self: center;
 }
 .subscribeForm{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
     
 }
 
@@ -63,7 +66,7 @@
 .subscribeText h2{
     color: #ffffff;
     font-family: inherit;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-weight: 300;
     text-align:  left;
     text-transform: uppercase;
@@ -95,7 +98,7 @@
     border-color: #ffffff;
     box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.5);
     padding: 0 5px;
-    font-size: 1vw;
+    font-size: 1.1vw;
     
 }
 
@@ -110,7 +113,8 @@
     text-align: center;
     padding: 8px 28px;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     transition-duration: 0.4s;
     cursor: pointer;
            
@@ -123,31 +127,48 @@
 
 /* media queries */
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 768px){
 
     .subscribe{
         background-color: #B66D49;
-        position: relative;
-        min-height: 30vw;
-        overflow: hidden;
-    
+        min-height: 50vw;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: space-around;
     }
 
     .subscribeContainer{
         background-color: #00C8CD;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         flex-wrap: wrap;
-        position: absolute;
+        justify-content: space-evenly;
         width: 60%;
+        height: 40vw;
         left: 0px;
-        top: 15%;
-        bottom: 15%;
         box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
-        padding-left: 2%;
-        padding-right: 2%;
+        padding-left: 10%;
+        padding-right: 5%;
+        align-self: center;
     }
+
+    .subscribeImgWrapper{
+        right: 0;
+        width: 40%;
+        height: 50vw;
+        display: flex;
+    }
+    
+    .subscribeImgWrapper img{
+        width: 100%;
+        height: auto;
+        opacity: 0.1;
+    }
+    .subscribeText{
+        margin-bottom: 0;
+    }
+    
+
     .subscribeText h2{
         color: #ffffff;
         font-family: inherit;
@@ -155,7 +176,7 @@
         font-weight: 300;
         text-align:  left;
         text-transform: uppercase;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
        
     }
     
@@ -164,9 +185,10 @@
         text-align: left;
         color: #fff;
         font-weight: 300;
-        font-size: 1.6vw;
+        font-size: 1.8vw;
         line-height: 1.5;
-        margin-top: 2px;       
+        margin-top: 2px;
+        margin-bottom: 0; 
         
     }
     
@@ -183,12 +205,13 @@
         text-transform: uppercase;
         transition-duration: 0.4s;
         cursor: pointer;
-        margin-top: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
          
     }
     .subscribeInput{
         font-family: inherit;
-        height: 2vh;
+        height: 4vh;
         width: 30vw;
         border: inset 2px;
         border-color: #ffffff;
@@ -201,59 +224,73 @@
 
     .subscribeForm{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-       
+        align-items: flex-start;
+        margin-bottom: 0;      
     }
 }
 
-@media screen and (max-width: 465px){
+@media screen and (max-width: 425px){
 
     .subscribe{
         background-color: #B66D49;
-        position: relative;
-        min-height: 70vh;
-        overflow: hidden;
-    
+        min-height: 70vw;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: space-around;
     }
+
     .subscribeContainer{
         background-color: #00C8CD;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         flex-wrap: wrap;
-        position: absolute;
+        justify-content: space-evenly;
         width: 100%;
+        height: 50vw;
         left: 0px;
-        top: 15%;
-        bottom: 15%;
         box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
-        padding-left: 20%;
+        padding-left: 25%;
         padding-right: 20%;
+        align-self: center;
     }
-  
-  
+
+    .subscribeImgWrapper{
+        display: none
+    }
+    
+    .subscribeImgWrapper img{
+        display: none
+    }
+    .subscribeText{
+        margin-bottom: 0;
+    }
+    
+
     .subscribeText h2{
         color: #ffffff;
         font-family: inherit;
-        font-size: 5vw;
+        font-size: 3.5vw;
         font-weight: 300;
         text-align:  left;
         text-transform: uppercase;
-        margin-bottom: 10px;
-        
+        margin-bottom: 5px;
+       
     }
+    
 
     .subscribeText p{
         text-align: left;
         color: #fff;
         font-weight: 300;
-        font-size: 4vw;
+        font-size: 2.5vw;
         line-height: 1.5;
-        margin-top: 2px;       
+        margin-top: 2px;
+        margin-bottom: 5px; 
         
     }
-
+    
     .subscribeSubmit{
         color: #ffffff;
         background-color: #324B4C;
@@ -267,32 +304,29 @@
         text-transform: uppercase;
         transition-duration: 0.4s;
         cursor: pointer;
-        margin-top: 10px;
-            
+        margin-top: 5px;
+        margin-bottom: 5px;
+         
     }
     .subscribeInput{
         font-family: inherit;
-        height: 5vh;
-        width: 50vw;
+        height: 6vw;
+        width: 35vw;
         border: inset 2px;
         border-color: #ffffff;
         box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.5);
         padding: 0 5px;
-        font-size: 3vw;
-        margin-right: 40px;
-
-    }
-    .subscribe img{
-        display: none;
+        font-size: 2.5vw;
+        margin-right: 45px;
+    
     }
 
     .subscribeForm{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-start;
-        
+        align-items: flex-start;
+        margin-bottom: 0;      
     } 
 } 
 

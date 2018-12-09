@@ -29,7 +29,7 @@
   margin: 0;
 }
 
-@media screen and (min-width: 465px) {
+@media screen and (min-width: 425px) {
 
   .heroHeadline {
     font-size: 2.4rem;
