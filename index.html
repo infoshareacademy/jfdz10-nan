@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cat4you</title> <!-- wymyslic tytul-->
+    <title>Cat4you</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/subscribe.css">
     <link rel="stylesheet" href="css/team.css">
     <link rel="stylesheet" href="css/functions.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
+
 <body>
     <nav class="menu">
         <label class="menu__label" for="menu__switch">
@@ -49,8 +51,8 @@
         </div>
    </section>
     <main>
-        <!-- spis planowanych funkcji - ponizej-->
 
+       <!-- spis planowanych funkcji - ponizej-->
         <section class="function" id="function">
             <h2 class="function__title">Chcemy Ci zaoferować</h2>
             <div class="function__wrapper">
@@ -90,11 +92,26 @@
             </div>
         </section>
 
-         <!-- informacje o zespole - ponizej-->
-          <!-- zapis na premiere-ponizej-->
+        <!-- zapis na premiere-ponizej-->
+        <section class=subscribe id="contact">          
+                <div class="subscribeImgWrapper"><img src="fotos/cat4you-sign-white.png" alt="cat 4 you sign">
+                </div>
+                <div class="subscribeContainer">
+                    <div class="subscribeText">
+                        <h2>Zrób pierwszy krok. <span>Zapisz się na premierę naszej strony!</span></h2>
+                        <p>Zapraszamy do rejestracji, możesz być pewien że z nami Twoje dane są bezpieczne. Bez obaw o spam! Otrzymasz od nas, jedynie maila powitalnego.</p>
+                    </div>
+                    <form class="subscribeForm" action="mailto:someone@example.com" method="post" enctype="text/plain">
+                        <input class="subscribeInput" type="text" name="mail" placeholder="Wpisz swój adres e-mail">
+                        <input class="subscribeSubmit" type="submit" value="Wyślij">
+                    </form>
+                 </div>
+        </section>
 
+        <!-- informacje o zespole - ponizej-->
         <section class="team" id="team">
             <h2 class="team__title">Poznaj nasz zespół</h2>
+
             <div class="team__wrapper">
 
                 <!-- Person 1 -->
