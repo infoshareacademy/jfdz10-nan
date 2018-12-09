@@ -53,10 +53,14 @@
 
 .navList__element{
   font-family: 'Montserrat', sans-serif;
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
   height: 20px;
   margin: 5px;
 }
+
+/************************/
+/*   media queries     */
+/**********************/
 
 @media (min-width: 768px){
   .menu{
@@ -98,6 +102,6 @@
     top: 0;
     width: 50vw;
     margin-left: 50vw;
-    height: 50px;
+    height: 49px;
   }
 }

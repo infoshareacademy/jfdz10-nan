@@ -43,6 +43,13 @@
   background-color: #1BD3E8;
 }
 
+@media screen and (orientation: landscape) {
+
+  .hero__container{
+    padding-top: 25vh;
+  }
+}
+
 @media screen and (min-width: 426px) {
 
   .hero__headline {
