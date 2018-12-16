@@ -1,0 +1,8 @@
+table tr td {
+    border: 1px solid red;
+}
+
+.active {
+    background-color: aqua;
+    transition: 300ms linear;
+}
