@@ -49,14 +49,18 @@
     color: #324B4C;
 }
 
-@media screen and (min-width: 1024px) {
+/************************/
+/*   media queries     */
+/**********************/
+
+@media screen and (min-width: 768px) {
 
     .subscribeContainer {
         padding: 5vh 15vw;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
 
     .subscribeContainer {
         width: 60%;
