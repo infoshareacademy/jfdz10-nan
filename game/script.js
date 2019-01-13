@@ -20,10 +20,11 @@ function createBoard(rows, cells){
 
         for (var j = 0; j < cells; j++) {
             var isFirstCell = (j === 0 && i === rows - 1);
+
             if (isFirstCell) {
-                table += '<td class="cell active">1</td>';
+                table += `<td x=${j} y=${i} class="cell active">1</td>`;
             } else {
-                table += '<td class="cell">1</td>';
+                table += `<td x=${j} y=${i}  class="cell">1</td>`;
             }
         }
 
@@ -32,6 +33,32 @@ function createBoard(rows, cells){
     table += '</table>';
     boardContainer.innerHTML = table;
 }
+
+function generatePoints() {
+    var cells = document.querySelectorAll('tr:first-child td:not(.points)');
+    var randomIndex = Math.floor(Math.random() * cells.length);
+    cells[randomIndex].classList.add('points');
+
+    movePoints(randomIndex);
+}
+
+function movePoints(randomIndex) {
+    setInterval(() => {
+        var point = document.querySelector(`.points[x="${randomIndex}"]`);
+        var y = +point.getAttribute('y');
+        var x = +point.getAttribute('x');
+        var cellBelowCssSelector = `td[x="${x}"][y="${y + 1}"]`
+        var cell = document.querySelector(cellBelowCssSelector);
+
+        cell.classList.add('points');
+
+        var currentCellCssSelector = `td[x="${x}"][y="${y}"]`
+        var previous = document.querySelector(currentCellCssSelector);
+        previous.classList.remove('points');
+       
+    }, 500);
+}
+
 
 function moveRight() {
     var next = getActiveElement().nextSibling;
@@ -66,7 +93,10 @@ function onControlChange(event) {
 }
 
 
-createBoard(4, 10);
+createBoard(10, 10);
+setInterval(generatePoints, 1000);
+movePoints();
 document.addEventListener('keyup', onControlChange)
 
+/*************************************** */
 

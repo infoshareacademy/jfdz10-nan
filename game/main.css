@@ -6,3 +6,8 @@ table tr td {
     background-color: aqua;
     transition: 300ms linear;
 }
+
+.points {
+    background-color: green;
+    transition: 300ms linear;
+}
