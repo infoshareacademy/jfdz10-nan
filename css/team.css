@@ -35,7 +35,7 @@
 }
 
 /* grid setup */
-@media screen and (min-width: 465px){
+@media screen and (min-width: 426px){
     .team__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 2fr);
@@ -44,7 +44,7 @@
     }
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 769px){
     .team__wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);

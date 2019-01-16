@@ -6,68 +6,88 @@
   color: #fff;
 }
 
-.heroContainer {
+.hero__container {
   padding-top: 50vh;
   text-align: center;
 }
 
-.heroHeadline {
+.hero__headline {
   font-size: 2.2rem;
-  font-weight: 100;
+  font-weight: 400;
   margin: 0;
 }
 
-.heroLogo {
+.hero__logo {
   height: 55px;
   margin-top: 0.7rem;
   margin-bottom: 0.5rem;
 }
 
-.heroText {
+.hero__text {
   font-size: 1.2rem;
-  font-weight: 100;
+  font-weight: 300;
   margin: 0;
 }
 
-@media screen and (min-width: 465px) {
+.hero__button {
+  width: 200px;
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 3vh auto;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-  .heroHeadline {
+.hero__button:hover {
+  background-color: #1BD3E8;
+}
+
+@media screen and (min-width: 426px) {
+
+  .hero__headline {
     font-size: 2.4rem;
   }
 
-  .heroLogo {
+  .hero__logo {
     height: 72px;
   }
 
-  .heroText {
+  .hero__text {
     font-size: 1.4rem;
   }
 
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 769px) {
 
   .hero {
     background-position: right top;
   }
 
-  .heroContainer {
+  .hero__container {
     padding: 41vh 0 0 3vw;
     text-align: left;
   }
 
-  .heroHeadline {
+  .hero__headline {
     font-size: 3rem;
   }
 
-  .heroLogo {
+  .hero__logo {
     height: 90px;
     margin-top: 1.3rem;
     margin-bottom: 0.9rem;
   }
 
-  .heroText {
+  .hero__text {
     font-size: 2rem;
+  }
+
+  .hero__button {
+    width: 250px;
+    font-size: 1.5rem;
+    margin-left: 3vw;
   }
 
 }
