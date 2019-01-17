@@ -1,0 +1,8 @@
+.additional__information {
+    background: url("../fotos/additional-functions-backgr.jpg") no-repeat rgb(0, 0, 0);
+}
+
+.additional__information--title {
+    text-transform: uppercase;
+    color: #fff;
+}
