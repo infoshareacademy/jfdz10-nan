@@ -1,13 +1,45 @@
 table tr td {
-    border: 1px solid red;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
 }
 
 .active {
     background-color: aqua;
-    transition: 300ms linear;
 }
 
 .points {
     background-color: green;
-    transition: 300ms linear;
+}
+
+.points.negative {
+    background-color: red;
+}
+
+.points.milk {
+    background-color: yellow;
+}
+
+.points.mouse {
+    background-color: gray;
+}
+
+.points.drop {
+    background-color: blue;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.score {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.life {
+    color: red;
+    font-size: 30px;
+    font-weight: 800;
 }
