@@ -1,40 +1,44 @@
 table {
-    background-color: aqua;
     border-collapse: collapse;
+    background: url(game_icons/board-game-bottom.png) no-repeat rgb(181, 228, 255);
+    background-position: bottom;
+    background-position-y: 111%;
 }
 
 table tr td {
-    width: 70px;
-    height: 70px;  
+    width: 80px;
+    height: 80px;  
 }
 
 .active {
-    background: url(game_icons/kitty-basket.png) no-repeat aqua;
-    background-position: bottom;
-}
-
-.points {
-    background-color: green;
+    content: url(game_icons/kitty-basket.png);
+    text-align: center;
 }
 
 .points.negative {
-    background: url(game_icons/bomb.png) no-repeat aqua;
-    background-position: bottom;
+    content: url(game_icons/bomb.png);
+    text-align: center;
+    height: 80px;
+    width: auto;
 }
 
 .points.milk {
-    background: url(game_icons/milk.png) no-repeat aqua;
-    background-position: bottom;
+    content: url(game_icons/milk.png);
+    text-align: center;
+    height: 80px;
+    width: auto;
 }
 
 .points.mouse {
-    background: url(game_icons/mouse.png) no-repeat aqua;
-    background-position: bottom;
+    content: url(game_icons/mouse.png);
+    height: 80px;
+    width: auto;
 }
 
 .points.drop {
-    background: url(game_icons/drops.png) no-repeat aqua;
-    background-position: bottom;
+    content: url(game_icons/drops.png);
+    height: 80px;
+    width: auto;
 }
 
 .menu {
