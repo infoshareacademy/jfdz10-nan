@@ -1,11 +1,16 @@
+table {
+    background-color: aqua;
+    border-collapse: collapse;
+}
+
 table tr td {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
+    width: 70px;
+    height: 70px;  
 }
 
 .active {
-    background-color: aqua;
+    background: url(game_icons/kitty-basket.png) no-repeat aqua;
+    background-position: bottom;
 }
 
 .points {
@@ -13,19 +18,23 @@ table tr td {
 }
 
 .points.negative {
-    background-color: red;
+    background: url(game_icons/bomb.png) no-repeat aqua;
+    background-position: bottom;
 }
 
 .points.milk {
-    background-color: yellow;
+    background: url(game_icons/milk.png) no-repeat aqua;
+    background-position: bottom;
 }
 
 .points.mouse {
-    background-color: gray;
+    background: url(game_icons/mouse.png) no-repeat aqua;
+    background-position: bottom;
 }
 
 .points.drop {
-    background-color: blue;
+    background: url(game_icons/drops.png) no-repeat aqua;
+    background-position: bottom;
 }
 
 .menu {
