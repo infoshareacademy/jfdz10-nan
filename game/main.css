@@ -10,6 +10,12 @@ table tr td {
     height: 80px;  
 }
 
+.menu {
+    background: url(game_icons/board-game-top.png) no-repeat rgb(181, 228, 255);
+    width: 820px;
+    height: 130px;
+}
+
 .active {
     content: url(game_icons/kitty-basket.png);
     text-align: center;
