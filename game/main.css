@@ -10,12 +10,6 @@ table tr td {
     height: 80px;  
 }
 
-.menu {
-    background: url(game_icons/board-game-top.png) no-repeat rgb(181, 228, 255);
-    width: 820px;
-    height: 130px;
-}
-
 .active {
     content: url(game_icons/kitty-basket.png);
     text-align: center;
@@ -50,11 +44,22 @@ table tr td {
 .menu {
     display: flex;
     justify-content: space-between; 
+    background: url(game_icons/board-game-top.png) no-repeat rgb(181, 228, 255);
+    width: 820px;
+    height: 130px;
+}
+
+.score__board {
+    
+    font-size: 30px;
+    font-weight: 800;
 }
 
 .score {
-    font-size: 30px;
-    font-weight: 800;
+    background-color: rgb(255, 229, 116);
+    border: 5px rgb(104, 62, 56) solid;
+    border-radius: 15%;
+    text-align: center;
 }
 
 .life {
