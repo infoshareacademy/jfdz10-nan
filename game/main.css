@@ -16,27 +16,27 @@ table tr td {
 }
 
 .points.negative {
-    content: url(game_icons/bomb.png);
+    background: url(game_icons/bomb.png) no-repeat;
     text-align: center;
     height: 80px;
     width: auto;
 }
 
 .points.milk {
-    content: url(game_icons/milk.png);
+    background: url(game_icons/milk.png) no-repeat;
     text-align: center;
     height: 80px;
     width: auto;
 }
 
 .points.mouse {
-    content: url(game_icons/mouse.png);
+    background: url(game_icons/mouse.png) no-repeat;
     height: 80px;
     width: auto;
 }
 
 .points.drop {
-    content: url(game_icons/drops.png);
+    background: url(game_icons/drops.png) no-repeat;
     height: 80px;
     width: auto;
 }
