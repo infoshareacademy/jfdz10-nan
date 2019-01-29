@@ -52,7 +52,7 @@
    </section>
     <main>
 
-       <!-- spis planowanych funkcji - ponizej-->
+       <!-- spis planowanych funkcji -action="mailto:someone@example.com" method="post" ponizej-->
         <section class="function" id="function">
             <h2 class="function__title">Chcemy Ci zaoferować</h2>
             <div class="function__wrapper">
@@ -101,9 +101,10 @@
                         <h2>Zrób pierwszy krok. <span>Zapisz się na premierę naszej strony!</span></h2>
                         <p>Zapraszamy do rejestracji, możesz być pewien że z nami Twoje dane są bezpieczne. Bez obaw o spam! Otrzymasz od nas, jedynie maila powitalnego.</p>
                     </div>
-                    <form class="subscribeForm" action="mailto:someone@example.com" method="post" enctype="text/plain">
-                        <input class="subscribeInput" type="email" name="mail" placeholder="Wpisz swój adres e-mail">
-                        <input class="subscribeSubmit" type="submit" value="Wyślij">
+                    <form id="email-form" class="subscribeForm">
+                        <input class="subscribeInput"  required="required" type="email" placeholder="Wpisz swój adres e-mail">
+                        <input id="submit" class="subscribeSubmit" type="submit" value="Wyślij">
+                        
                     </form>
                  </div>
         </section>
@@ -162,6 +163,6 @@
             </a>
         </div>
     </footer>
-    <script src="form.js"></script>
+    <script src="/scripts/game_for_mail.js"></script>
 </body>
 </html>
