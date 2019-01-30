@@ -2,7 +2,7 @@ table {
     border-collapse: collapse;
     background: url(game_icons/board-game-bottom.png) no-repeat rgb(181, 228, 255);
     background-position: bottom;
-    background-position-y: 111%;
+    background-position-y: 115%;
 }
 
 table tr td {
@@ -17,26 +17,28 @@ table tr td {
 
 .points.negative {
     background: url(game_icons/bomb.png) no-repeat;
-    text-align: center;
+    background-position: center center;
     height: 80px;
     width: auto;
 }
 
 .points.milk {
     background: url(game_icons/milk.png) no-repeat;
-    text-align: center;
+    background-position: center center;
     height: 80px;
     width: auto;
 }
 
 .points.mouse {
     background: url(game_icons/mouse.png) no-repeat;
+    background-position: center center;
     height: 80px;
     width: auto;
 }
 
 .points.drop {
     background: url(game_icons/drops.png) no-repeat;
+    background-position: center center;
     height: 80px;
     width: auto;
 }
@@ -50,16 +52,19 @@ table tr td {
 }
 
 .score__board {
-    
+    font-family: 'Alfa Slab One', cursive;
     font-size: 30px;
     font-weight: 800;
+    margin: 10px 10px 0 0;
+    color: rgb(104, 62, 56)
 }
 
 .score {
     background-color: rgb(255, 229, 116);
-    border: 5px rgb(104, 62, 56) solid;
-    border-radius: 15%;
+    border: 3px rgb(104, 62, 56) solid;
+    border-radius: 0.5em 0.5em;
     text-align: center;
+    font-family: 'Alfa Slab One', cursive;
 }
 
 .life {

@@ -111,7 +111,7 @@ function onControlChange(event) {
 }
 
 
-createBoard(10, 10);
+createBoard(9, 10);
 var fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
 var fallingElementsIntervalId = setInterval(() => {
     var points = document.querySelectorAll(`.points`);
@@ -141,7 +141,7 @@ var fallingElementsIntervalId = setInterval(() => {
                     cell.classList.add('points', 'drop');
                     break;
                 case 'negative':
-                    isCellActive ? life -= 1 : null;
+                    isCellActive ? life -= 3 : null;
                     cell.classList.add('points', 'negative');
                     break;
             }
@@ -154,7 +154,7 @@ var fallingElementsIntervalId = setInterval(() => {
         scoreLife.innerText = life;
         point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
 
-        if (life === 0) {
+        if (life <= 0) {
             gameOver();
         }
     })
@@ -162,11 +162,20 @@ var fallingElementsIntervalId = setInterval(() => {
 }, 500);
 document.addEventListener('keyup', onControlChange)
 
+function getAllPoints() {
+    return document.querySelector('.points', '.mouse' , '.milk', '.drop', '.negative');
+}
+
+function removeAllPoints() {
+    getAllPoints().classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
+}
 function gameOver() {
     clearInterval(fallingElementsGeneratorIntervalId);
     clearInterval(fallingElementsIntervalId);
     saveScore({name: 'Janusz', points: score});
+    removeActiveClass();
     generateScoresAsNodeList();
+    removeAllPoints();
 }
 
 /*************************************** */
