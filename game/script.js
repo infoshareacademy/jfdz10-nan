@@ -162,11 +162,20 @@ var fallingElementsIntervalId = setInterval(() => {
 }, 500);
 document.addEventListener('keyup', onControlChange)
 
+function getAllPoints() {
+    return document.querySelector('.points', '.mouse' , '.milk', '.drop', '.negative');
+}
+
+function removeAllPoints() {
+    getAllPoints().classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
+}
 function gameOver() {
     clearInterval(fallingElementsGeneratorIntervalId);
     clearInterval(fallingElementsIntervalId);
     saveScore({name: 'Janusz', points: score});
+    removeActiveClass();
     generateScoresAsNodeList();
+    removeAllPoints();
 }
 
 /*************************************** */

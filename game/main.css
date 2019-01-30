@@ -2,7 +2,7 @@ table {
     border-collapse: collapse;
     background: url(game_icons/board-game-bottom.png) no-repeat rgb(181, 228, 255);
     background-position: bottom;
-    background-position-y: 111%;
+    background-position-y: 115%;
 }
 
 table tr td {
