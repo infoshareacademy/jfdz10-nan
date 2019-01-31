@@ -12,7 +12,7 @@
     margin-top: 25px;
 }
 
-.additional__information--desription {
+.additional__information--description {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,9 +65,10 @@
     .additional__container {
         display: flex;
         flex-direction: column;
+        margin: 0 51% 0 0; 
     }
 
-    .additional__information--desription {
+    .additional__information--description {
         display: inline-flex;
         flex-direction: row;
         max-width: 1080px;
@@ -75,6 +76,7 @@
 
     .additional__information--text {
         margin-left: 15px;
+        text-align: left;
     }
 
     .additional__information--arrow {
@@ -90,8 +92,4 @@
         max-width: 1080px;
         margin: 0 40% 0 15%;
     }
-}
-
-.additional__information--text {
-    text-align: left;
 }
