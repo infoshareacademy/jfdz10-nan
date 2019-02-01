@@ -1,4 +1,6 @@
 var boardContainer = document.querySelector('#board__container');
+var playButton = document.querySelector('.play__button');
+var startBoard = document.querySelector('#start__window');
 
 var controls = {
     LEFT: 37,
@@ -9,6 +11,16 @@ var scoreBoard = document.querySelector('.score');
 var score = 0;
 var scoreLife = document.querySelector('.life');
 var life = 3;
+
+
+window.addEventListener("click", event => {
+    var target = event.target;
+    if (target.classList.contains('play__button')) {
+        startBoard.remove();
+        createBoard(9, 10);
+fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
+}
+});
 
 
 function getActiveElement() {
@@ -111,8 +123,8 @@ function onControlChange(event) {
 }
 
 
-createBoard(9, 10);
-var fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
+
+
 var fallingElementsIntervalId = setInterval(() => {
     var points = document.querySelectorAll(`.points`);
     points.forEach(point => {
@@ -178,5 +190,5 @@ function gameOver() {
     removeAllPoints();
 }
 
-/*************************************** */
+/****************************************/
 
