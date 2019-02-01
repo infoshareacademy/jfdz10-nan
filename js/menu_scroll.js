@@ -1,15 +1,15 @@
-var sections = $('section')
-  , nav = $('nav')
-  , nav_height = nav.outerHeight();
+var sections = $('section');
+var nav = $('nav');
+var navHeight = nav.outerHeight();
 
 $(window).on('scroll', function () {
-  var cur_pos = $(this).scrollTop();
+  var curPos = $(this).scrollTop();
   
   sections.each(function() {
-    var top = $(this).offset().top - nav_height,
+    var top = $(this).offset().top - navHeight,
         bottom = top + $(this).outerHeight();
     
-    if (cur_pos >= top && cur_pos <= bottom) {
+    if (curPos >= top && curPos <= bottom) {
       nav.find('a').removeClass('active');
       sections.removeClass('active');
       
@@ -20,11 +20,11 @@ $(window).on('scroll', function () {
 });
 
 nav.find('a').on('click', function () {
-  var $el = $(this)
-    , id = $el.attr('href');
+  var $el = $(this);
+  var id = $el.attr('href');
   
   $('html, body').animate({
-    scrollTop: $(id).offset().top - nav_height
+    scrollTop: $(id).offset().top - navHeight,
   }, 500);
   
   return false;
