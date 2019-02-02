@@ -21,7 +21,7 @@
     text-transform: capitalize;
 }
 
-.teamPhoto{
+.team__photo{
     border-radius: 50%;
     width: 100%;
 }
@@ -45,6 +45,11 @@
 }
 
 @media screen and (min-width: 769px){
+    .team{
+        min-height: 400px;
+        margin-bottom: 50px;
+    }
+
     .team__wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
