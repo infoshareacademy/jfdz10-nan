@@ -80,7 +80,7 @@ table tr td {
     height: 60vh;
 }
 
-#start__board {
+#play__board {
     position:absolute;
     top: calc(50% - 159px);
     left: calc(50% - 207px);
@@ -107,7 +107,6 @@ margin: -2vh auto 3vh auto;
 text-align: center;
 text-transform: uppercase;
 color: rgb(253, 191, 43);
-text-decoration: none; 
 font-size: 34px;
 letter-spacing: 3px;
 }
@@ -119,10 +118,18 @@ letter-spacing: 3px;
 .instruction {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    color: white;
+    font-size: 30px;
 }
 
-.instruction__link {
-    color: white;
-    text-decoration: none; 
-    font-size: 25px;
+.instruction:hover {
+    cursor: pointer;
+}
+
+.laptop__cat {
+    background: url(game_icons/kitty-comp.png) no-repeat;
+    background-position: center center;
+    height: 132px;
+    width: auto;
+    margin-top: -2vh;
 }
