@@ -59,6 +59,14 @@
   margin: 5px;
 }
 
+.navList__element:hover {
+  color: rgb(6, 94, 104);
+}
+
+a.active {
+  border-bottom: 1px solid  #B66D49;
+}
+
 @media (min-width: 768px){
   .menu{
     height: 65px;
