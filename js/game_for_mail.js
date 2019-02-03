@@ -3,5 +3,5 @@ const strWindowFeatures = '_blank, height=612, width=820, resizable=no, modal=ye
 email.addEventListener('submit', openGameWindow);
 
 function openGameWindow() {
-    window.open('http://127.0.0.1:5500/Projekt/jfdz10-nan/game/index.html', '', strWindowFeatures);
+    window.open('http://127.0.0.1:5500/game/index.html', '', strWindowFeatures);
 }
