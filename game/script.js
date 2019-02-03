@@ -1,13 +1,10 @@
 var boardContainer = document.querySelector('#board__container');
-var playButton = document.querySelector('.play__button');
 var startWindow = document.querySelector('#start__window');
-var playBoard = document.querySelector('#play__board');
+var playBoard = document.querySelector('.play__board');
+var playButton = document.querySelector('.play__button');
 var laptopCat = document.querySelector('.laptop__cat');
-var instructionText = document.createElement('p');
-var back = document.createElement('p');
-var instructionBoard = document.createElement('div');
 
-var controls = {
+var controls = {    
     LEFT: 37,
     RIGHT: 39,
 };
@@ -20,20 +17,23 @@ var life = 3;
 
 window.addEventListener("click", event => {
     var target = event.target;
+    var instructionText = document.createElement('p');
+    var back = document.createElement('p');
+    var instructionBoard = document.createElement('div');
     var text = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element jest inaczej punktowany: mleko 2 pkt, myszka 3 pkt. Unikaj jednak spadających bomb i kropel wody! Po złapaniu kropli kotek traci życie. Koniec gry następuje po utracie 3 żyć lub po zetknięciu z bombą. Powodzenia!";
 
     if (target.classList.contains('play__button')) {
         startWindow.remove();
         laptopCat.remove();
         createBoard(9, 10);
-fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
+        fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
 
     } if (target.classList.contains('instruction')) {
         playBoard.remove();
         startWindow.appendChild(instructionBoard);
-        instructionBoard.classList.add("instruction__board")
+        instructionBoard.classList.add('instruction__board')
         instructionBoard.appendChild(instructionText);
-        instructionText.classList.add("instruction__text")
+        instructionText.classList.add('instruction__text');
         instructionText.textContent = text;
         instructionBoard.appendChild(back);
         back.classList.add("back");
@@ -142,9 +142,6 @@ function onControlChange(event) {
     }
     detectCollisions()
 }
-
-
-
 
 var fallingElementsIntervalId = setInterval(() => {
     var points = document.querySelectorAll(`.points`);

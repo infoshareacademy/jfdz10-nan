@@ -4,7 +4,7 @@
     background-position: bottom;
     background-position-y: 115%;
     width: 820px;
-    height: 758px;
+    height: 738px;
 }
 
 table tr td {
@@ -80,7 +80,7 @@ table tr td {
     height: 82%;
 }
 
-#play__board,
+.play__board,
 .instruction__board {
     position:absolute;
     top: calc(50% - 159px);
@@ -99,20 +99,22 @@ table tr td {
 }
 
 .play__button { 
-background-color: rgb(104, 62, 56);
-width: 200px;
-border: 2px solid;
-border-radius: 8px;
-padding: 5px;
-margin: -2vh auto 3vh auto;
-text-align: center;
-text-transform: uppercase;
-color: rgb(253, 191, 43);
-font-size: 34px;
-letter-spacing: 3px;
+    background-color: rgb(104, 62, 56);
+    width: 200px;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 5px;
+    margin: -2vh auto 3vh auto;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: rgb(253, 191, 43);
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.play__button:hover {
+.play__button:hover,
+.instruction:hover,
+.back:hover {
     cursor: pointer;
 }
 
@@ -121,10 +123,6 @@ letter-spacing: 3px;
     text-align: center;
     color: white;
     font-size: 30px;
-}
-
-.instruction:hover {
-    cursor: pointer;
 }
 
 .laptop__cat {
@@ -147,8 +145,6 @@ letter-spacing: 3px;
 .back {
     padding-right: 15px;
     text-align: right;
+    text-decoration: underline;
 }
 
-.back:hover {
-    cursor: pointer;
-}
