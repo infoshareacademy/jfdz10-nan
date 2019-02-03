@@ -3,7 +3,9 @@ var playButton = document.querySelector('.play__button');
 var startWindow = document.querySelector('#start__window');
 var playBoard = document.querySelector('#play__board');
 var laptopCat = document.querySelector('.laptop__cat');
-var instruction = document.createElement('p');
+var instructionText = document.createElement('p');
+var back = document.createElement('p');
+var instructionBoard = document.createElement('div');
 
 var controls = {
     LEFT: 37,
@@ -18,24 +20,29 @@ var life = 3;
 
 window.addEventListener("click", event => {
     var target = event.target;
+    var text = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element jest inaczej punktowany: mleko 2 pkt, myszka 3 pkt. Unikaj jednak spadających bomb i kropel wody! Po złapaniu kropli kotek traci życie. Koniec gry następuje po utracie 3 żyć lub po zetknięciu z bombą. Powodzenia!";
+
     if (target.classList.contains('play__button')) {
         startWindow.remove();
         laptopCat.remove();
         createBoard(9, 10);
 fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
-    } /*if (target.classList.contains('instruction')) {
-playBoard.innerHTML = instruction;
-instruction.textContent = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element spada z różną predkością i jest inaczej punktowany, i tak:
-krople (drops) 1pkt
-mleko (milk) 2 pkt
-myszka (mouse) 3 pkt 
-Unikaj jednak spadających bomb! Pe zetknięciu z bombą kotek traci życie. Koniec gry następuje po utracie 3 żyć. Aktualna ilość żyć wyświetlana jest w lewym górnym rogu.
-Po uzyskaniu 100 pkt przechodzisz do kolejnego poziomu, w którym spadające elementy poruszają się z jeszcze większą predkością.Niezależnie od ilości żyć jaką dysponowałeś po zakończeniu poziomu 1, po przejściu do poziomu 2 stan żyć ponownie wynosi 3 szt. Koniec gry następuje po utracie wszystkich żyć. 
-Po zakończeniu gry i wpisaniu nicka,  wyświetli się lista rankingowa wraz informacją o Twojej pozycji na tej liście.
-Powodzenia!"
-}*/
-});
 
+    } if (target.classList.contains('instruction')) {
+        playBoard.remove();
+        startWindow.appendChild(instructionBoard);
+        instructionBoard.classList.add("instruction__board")
+        instructionBoard.appendChild(instructionText);
+        instructionText.classList.add("instruction__text")
+        instructionText.textContent = text;
+        instructionBoard.appendChild(back);
+        back.classList.add("back");
+        back.textContent = "Powrót";
+    } if (target.classList.contains('back')) {
+        instructionBoard.remove();
+        startWindow.appendChild(playBoard);
+    }
+    });
 
 function getActiveElement() {
     return document.querySelector('.active');

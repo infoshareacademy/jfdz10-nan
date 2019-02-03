@@ -77,10 +77,11 @@ table tr td {
 
 #start__window {
     position:relative;
-    height: 60vh;
+    height: 82%;
 }
 
-#play__board {
+#play__board,
+.instruction__board {
     position:absolute;
     top: calc(50% - 159px);
     left: calc(50% - 207px);
@@ -131,5 +132,23 @@ letter-spacing: 3px;
     background-position: center center;
     height: 132px;
     width: auto;
-    margin-top: -2vh;
+}
+
+.instruction__board {
+    font-size: 15px;
+    color: rgb(104, 62, 56);
+    text-align: center;
+}
+
+.instruction__text {
+    padding-top: 30px;
+}
+
+.back {
+    padding-right: 15px;
+    text-align: right;
+}
+
+.back:hover {
+    cursor: pointer;
 }
