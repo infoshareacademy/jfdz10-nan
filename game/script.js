@@ -31,7 +31,7 @@ window.addEventListener("click", event => {
     } if (target.classList.contains('instruction')) {
         playBoard.remove();
         startWindow.appendChild(instructionBoard);
-        instructionBoard.classList.add('instruction__board')
+        instructionBoard.classList.add('instruction__board');
         instructionBoard.appendChild(instructionText);
         instructionText.classList.add('instruction__text');
         instructionText.textContent = text;
