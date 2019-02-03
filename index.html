@@ -57,7 +57,7 @@
     </section>
     <main>
 
-        <!-- spis planowanych funkcji - ponizej-->
+       <!-- spis planowanych funkcji -action="mailto:someone@example.com" method="post" ponizej-->
         <section class="function" id="function">
             <h2 class="function__title">Chcemy Ci zaoferować</h2>
             <div class="function__wrapper">
@@ -111,17 +111,22 @@
                     <p>Zapraszamy do rejestracji, możesz być pewien że z nami Twoje dane są bezpieczne. Bez obaw o
                         spam! Otrzymasz od nas, jedynie maila powitalnego.</p>
                 </div>
-                <form class="subscribeForm" action="mailto:someone@example.com" method="post" enctype="text/plain">
-                    <input class="subscribeInput" type="text" name="mail" placeholder="Wpisz swój adres e-mail">
-                    <input class="subscribeSubmit" type="submit" value="Wyślij">
-                </form>
-            </div>
+                <div class="subscribeContainer">
+                    <div class="subscribeText">
+                        <h2>Zrób pierwszy krok. <span>Zapisz się na premierę naszej strony!</span></h2>
+                        <p>Zapraszamy do rejestracji, możesz być pewien że z nami Twoje dane są bezpieczne. Bez obaw o spam! Otrzymasz od nas, jedynie maila powitalnego.</p>
+                    </div>
+                    <form id="email-form" class="subscribeForm">
+                        <input class="subscribeInput"  required="required" type="email" placeholder="Wpisz swój adres e-mail">
+                        <input id="submit" class="subscribeSubmit" type="submit" value="Wyślij">
+                        
+                    </form>
+                 </div>
         </section>
 
         <!-- informacje o zespole - ponizej-->
         <section class="team" id="team">
             <h2 class="team__title">Poznaj nasz zespół</h2>
-
             <div class="team__wrapper">
 
                 <!-- Person 1 -->
@@ -256,6 +261,9 @@
   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
   crossorigin="anonymous"></script>
     <script src="js/menu_scroll.js"></script>
+    <script src="js/game_for_mail.js"></script>
+    <script src="game/script.js"></script>
+    <script src="game/player_results.js"></script>
 </body>
 
 </html>
