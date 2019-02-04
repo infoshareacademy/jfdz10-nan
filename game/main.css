@@ -112,17 +112,24 @@ table tr td {
     text-transform: uppercase;
 }
 
-.play__button:hover,
-.instruction:hover,
-.back:hover {
+.play__button:hover {
     cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px 0px rgb(141, 141, 141);
+    transition: .2s;
 }
+
 
 .instruction {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
     font-size: 30px;
+}
+
+.instruction:hover,
+.back:hover {
+    cursor: pointer;
 }
 
 .laptop__cat {
