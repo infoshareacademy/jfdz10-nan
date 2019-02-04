@@ -24,7 +24,7 @@ nav.find('a').on('click', function () {
   var id = $el.attr('href');
   
   $('html, body').animate({
-    scrollTop: $(id).offset().top - navHeight,
+    scrollTop: $(id).offset().top - (navHeight - 1),
   }, 500);
   
   return false;
