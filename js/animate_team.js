@@ -1,30 +1,16 @@
-
-
-console.log('podpiety');
-
-const teamContainer = popmotion.styler(document.querySelector('.team__wrapper'));
-const teamImages = document.querySelector('.team__photo');
-
-//listen(document.querySelector('#team', 'onclick').start((e) => console.log(e));
-
-/*popmotion.tween({
-    from: {
-        scale: .7,
-        opacity: 0,
-        y: -300
-    },
-    to: {
-        scale: 1,
-        opacity: 1,
-        y: 0
-    },
-    duration: 3000
-
-}).start(teamContainer.set)*/
-
-const stylers = Array
-    .from(teamContainer.children)
-    .map(popmotion.styler)
-
-const animations = Array(stylers.length)
-    .fill(popmotion.spring({ from: 10000, to: 0 }))
+anime({
+    targets: 'img.team__photo',
+    translateY: [
+        {value: -1000, duration: 500},
+        {value: 0, duration: 800}
+    ],
+    //opacity: [
+        //{value: 0.5, duration: 500},
+        //{value: 1, duration: 800}
+    //],
+    //rotate: {
+        //value: '1turn',
+        //easing: 'easeInOutSine'
+   // },
+    //delay: function (el, i, l) { return i * 1000}
+});
