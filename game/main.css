@@ -172,10 +172,32 @@ table tr td {
 
 .final__scores--title {
     font-size: 20px;
-
+    text-decoration: underline;
 }
 
 .final__scores--list {
     text-align: left;
     list-style-type: none;
+}
+
+.restart__button { 
+    background-color: rgb(54, 133, 1);
+    width: 350px;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 15px auto 3vh auto;
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: rgb(253, 191, 43);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.restart__button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px 0px rgb(141, 141, 141);
+    transition: .2s;
 }

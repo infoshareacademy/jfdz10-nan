@@ -1,6 +1,18 @@
 var scoresContainer = document.querySelector('#scores');
 var LS_SCORES_KEY = 'scores';
 
+function playAgain () {
+    playAgainButton.addEventListener("click", startGame);
+    scoresContainer.remove();
+}
+
+function createPlayAgainButton() {
+    var playAgainButton = document.createElement('button');
+    playAgainButton.classList.add('restart__button');
+    playAgainButton.textContent = "play again";
+    scoresContainer.appendChild(playAgainButton);
+}
+
 function generateScoresAsNodeList() {
     scoresContainer.classList.add('final__scores');
     var finalScoreTitle = document.createElement('p');
@@ -12,10 +24,11 @@ function generateScoresAsNodeList() {
     scoresContainer.appendChild(finalScoreList);
     const items = sortScoresASC(getScores())
         .map((score, i) => `<li>${i + 1}. ${score.name} : ${score.points}</li>`)
-        .filter((person, i) => i < 10).join('');
+        .filter((player, i) => i < 6).join('');
 
     finalScoreList.innerHTML = `<ul>${items}</ul>`;
-    finalScoreList.style.listStyle = 'none';
+    finalScoreList.style.listStyle = 'none;';
+    createPlayAgainButton();
 }
 
 function saveScore(score) {

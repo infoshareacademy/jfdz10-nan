@@ -14,8 +14,7 @@ var score = 0;
 var scoreLife = document.querySelector('.life');
 var life = 3;
 
-
-window.addEventListener("click", event => {
+function startGame(target) {
     var target = event.target;
     var instructionText = document.createElement('p');
     var back = document.createElement('p');
@@ -42,7 +41,11 @@ window.addEventListener("click", event => {
         instructionBoard.remove();
         startWindow.appendChild(playBoard);
     }
-    });
+    };
+
+
+window.addEventListener("click", startGame);
+    
 
 function getActiveElement() {
     return document.querySelector('.active');
