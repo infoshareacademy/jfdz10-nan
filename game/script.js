@@ -4,7 +4,7 @@ var playBoard = document.querySelector('.play__board');
 var playButton = document.querySelector('.play__button');
 var laptopCat = document.querySelector('.laptop__cat');
 
-var controls = {    
+var controls = {
     LEFT: 37,
     RIGHT: 39,
 };
@@ -14,7 +14,7 @@ var score = 0;
 var scoreLife = document.querySelector('.life');
 var life = 3;
 
-function startGame(target) {
+function startGame() {
     var target = event.target;
     var instructionText = document.createElement('p');
     var back = document.createElement('p');
@@ -26,6 +26,7 @@ function startGame(target) {
         laptopCat.remove();
         createBoard(9, 10);
         fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
+    
 
     } if (target.classList.contains('instruction')) {
         playBoard.remove();
@@ -41,11 +42,11 @@ function startGame(target) {
         instructionBoard.remove();
         startWindow.appendChild(playBoard);
     }
-    };
+};
 
 
 window.addEventListener("click", startGame);
-    
+
 
 function getActiveElement() {
     return document.querySelector('.active');
@@ -76,6 +77,7 @@ function createBoard(rows, cells) {
     boardContainer.innerHTML = table;
 }
 
+/*czy ta pusta funkcja jest komuś potrzebna?*/
 function getElementBelow(tableCell) {
 
 }
@@ -179,9 +181,9 @@ var fallingElementsIntervalId = setInterval(() => {
                     break;
             }
 
-
         } else {
             life -= 1;
+            
         }
         scoreBoard.innerText = score;
         scoreLife.innerText = life;
@@ -195,6 +197,27 @@ var fallingElementsIntervalId = setInterval(() => {
 }, 500);
 document.addEventListener('keyup', onControlChange)
 
+/* Nie działa, wymaga przemyślenia */
+function removeLifes() {
+    var lifeHeadOne = document.className.contains('life__head1');
+    var lifeHeadTwo = document.querySelector('.life__head2');
+    var lifeHeadThree = document.querySelector('.life__head3');
+    if (life === 2) {
+        lifeHeadOne.remove();
+    }
+    if(life === 1) {
+        lifeHeadOne.remove();
+        lifeHeadTwo.remove();
+    }
+    if(life === 0) {
+        lifeHeadOne.remove();
+        lifeHeadTwo.remove();
+        lifeHeadThree.remove();
+    }
+}
+removeLifes();
+
+
 function removeAllPoints() {
     const styles = document.querySelectorAll('.cell');
     styles.forEach(style => style.classList.remove('points'));
@@ -203,10 +226,9 @@ function removeAllPoints() {
 function gameOver() {
     clearInterval(fallingElementsGeneratorIntervalId);
     clearInterval(fallingElementsIntervalId);
-    saveScore({name: 'Janusz', points: score});
     removeActiveClass();
-    generateScoresAsNodeList();
     removeAllPoints();
+    finalScore();
 }
 
 /****************************************/

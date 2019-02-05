@@ -62,7 +62,7 @@ table tr td {
     font-size: 30px;
     font-weight: 800;
     margin: 10px 10px 0 0;
-    color: rgb(104, 62, 56)
+    color: rgb(104, 62, 56);
 }
 
 .score {
@@ -71,12 +71,19 @@ table tr td {
     border-radius: 0.5em 0.5em;
     text-align: center;
     font-family: 'Alfa Slab One', cursive;
+
 }
 
 .life {
     color: red;
     font-size: 30px;
     font-weight: 800;
+    margin: 10px 0 0 10px;
+    /*display none ustawi kotki we właściwej pozycji, ale zachowa możliwość odwoływania się do life*/
+}
+
+.life__heads {
+    margin: 10px 0 0 10px;
 }
 
 #start__window {
@@ -119,7 +126,7 @@ table tr td {
 .play__button:hover {
     cursor: pointer;
     transform: scale(1.05);
-    box-shadow: 2px 2px 5px 0px rgb(141, 141, 141);
+    box-shadow: 2px 2px 5px 0px rgb(202, 173, 10);
     transition: .2s;
 }
 
@@ -180,24 +187,59 @@ table tr td {
     list-style-type: none;
 }
 
-.restart__button { 
+.restart__button, .save__button { 
     background-color: rgb(54, 133, 1);
     width: 350px;
-    border: 2px solid;
+    border: 2px solid rgb(44, 109, 1);
+    box-shadow: 0px 2px 5px 0px rgb(6, 77, 41);
     border-radius: 8px;
     padding: 5px;
     margin: 15px auto 3vh auto;
     font-size: 24px;
     letter-spacing: 3px;
-    color: rgb(253, 191, 43);
+    color: #fff;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Alfa Slab One', cursive;
 }
 
-.restart__button:hover {
+.restart__button:hover, .save__button:hover {
     cursor: pointer;
     transform: scale(1.05);
-    box-shadow: 2px 2px 5px 0px rgb(141, 141, 141);
+    box-shadow: 2px 2px 5px 0px rgb(202, 173, 10);
     transition: .2s;
+}
+
+.game__result {
+    position:absolute;
+    top: calc(50% - 159px);
+    left: calc(50% - 207px);
+    width: 414px;
+    height: 318px;
+    background: url(game_icons/yellow-board.png) no-repeat;
+    font-family: 'Alfa Slab One', cursive;
+    text-align: center;
+}
+
+.game__result--title {
+    font-size: 38px;
+    margin: 20px;
+}
+
+.game__result--score {
+    font-size: 60px;
+    margin: 10px;
+}
+
+.player__name {
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    border: 2px solid rgb(185, 185, 185);;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 15px auto 0 auto;
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-align: center;
 }

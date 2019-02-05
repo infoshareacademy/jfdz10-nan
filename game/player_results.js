@@ -1,10 +1,16 @@
 var scoresContainer = document.querySelector('#scores');
 var LS_SCORES_KEY = 'scores';
 
-function playAgain () {
-    playAgainButton.addEventListener("click", startGame);
-    scoresContainer.remove();
+/*czyści pole gry, ale nie zmienia wyniku na zero i nie rozpoczyna nowej gry*/
+function playAgain(target) {
+    var target = event.target;
+    if(target.classList.contains('restart__button')) {
+        scoresContainer.remove();
+        startGame();
+    }
 }
+
+window.addEventListener("click", playAgain);
 
 function createPlayAgainButton() {
     var playAgainButton = document.createElement('button');
@@ -14,14 +20,18 @@ function createPlayAgainButton() {
 }
 
 function generateScoresAsNodeList() {
-    scoresContainer.classList.add('final__scores');
     var finalScoreTitle = document.createElement('p');
+    var finalScoreList = document.createElement('div');
+
+    scoresContainer.classList.add('final__scores');
+
     scoresContainer.appendChild(finalScoreTitle);
     finalScoreTitle.textContent = "Tablica wyników:";
     finalScoreTitle.classList.add('final__scores--title');
-    var finalScoreList = document.createElement('div');
+    
     finalScoreList.classList.add('final__scores--list');
     scoresContainer.appendChild(finalScoreList);
+
     const items = sortScoresASC(getScores())
         .map((score, i) => `<li>${i + 1}. ${score.name} : ${score.points}</li>`)
         .filter((player, i) => i < 6).join('');
