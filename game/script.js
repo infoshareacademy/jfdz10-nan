@@ -77,11 +77,6 @@ function createBoard(rows, cells) {
     boardContainer.innerHTML = table;
 }
 
-/*czy ta pusta funkcja jest komuś potrzebna?*/
-function getElementBelow(tableCell) {
-
-}
-
 function generatePoints() {
     var cells = document.querySelectorAll('tr:first-child td:not(.points)');
     var randomIndex = Math.floor(Math.random() * cells.length);
@@ -192,31 +187,12 @@ var fallingElementsIntervalId = setInterval(() => {
         if (life <= 0) {
             gameOver();
         }
+        console.log(life)
+        
     })
     detectCollisions()
 }, 500);
 document.addEventListener('keyup', onControlChange)
-
-/* Nie działa, wymaga przemyślenia 
-function removeLifes() {
-    var lifeHeadOne = document.querySelector('.life__head1');
-    var lifeHeadTwo = document.querySelector('.life__head2');
-    var lifeHeadThree = document.querySelector('.life__head3');
-    if (life === 2) {
-        lifeHeadOne.remove();
-    }
-    if(life === 1) {
-        lifeHeadOne.remove();
-        lifeHeadTwo.remove();
-    }
-    if(life === 0) {
-        lifeHeadOne.remove();
-        lifeHeadTwo.remove();
-        lifeHeadThree.remove();
-    }
-}
-removeLifes();
-*/
 
 function removeAllPoints() {
     const styles = document.querySelectorAll('.cell');
@@ -230,6 +206,4 @@ function gameOver() {
     removeAllPoints();
     finalScore();
 }
-
-/****************************************/
 
