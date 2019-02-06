@@ -19,7 +19,7 @@
     color: #324B4C;
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
-    text-align: center;
+    text-align: justify;
     text-transform: capitalize;
 }
 
@@ -27,7 +27,7 @@
     color: #324B4C;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    text-align: justify;
+    text-align: center;
     padding: 0 auto;
 }
 
@@ -68,7 +68,6 @@
 .team__clip-path-container:hover .team__person--photo {
     clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
     transform: scale(1.1);
-
 }
 
 .team__clip-path-container:hover .team__person--links { 
