@@ -18,8 +18,6 @@ function playerNameForm() {
     playerNameInput.setAttribute("placeholder", "Wpisz swój nick");
 }
 
-
-
 function finalScore() {
     var gameResultTitle = document.createElement('p');
     var gameResult = document.createElement('p');
@@ -38,7 +36,6 @@ function finalScore() {
     createSaveResultButton();
 }
 
-
 function saveResult(target) {
     var target = event.target;
     var input = document.getElementById('input');
@@ -46,7 +43,6 @@ function saveResult(target) {
         saveScore({name: input.value, points: score});
         finalScoreContainer.remove();
         generateScoresAsNodeList();
-        console.log(playerName);
     }
 }
 

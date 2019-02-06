@@ -170,6 +170,7 @@ table tr td {
     position:absolute;
     top: calc(50% - 159px);
     left: calc(50% - 207px);
+    /*set margin*/
     width: 414px;
     height: 318px;
     background: url(game_icons/yellow-board.png) no-repeat;

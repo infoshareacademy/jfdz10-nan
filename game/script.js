@@ -114,7 +114,6 @@ function detectCollisions() {
     }
 }
 
-
 function moveRight() {
     var next = getActiveElement().nextSibling;
     if (next === null) {
@@ -150,6 +149,7 @@ function onControlChange(event) {
 
 var fallingElementsIntervalId = setInterval(() => {
     var points = document.querySelectorAll(`.points`);
+    
     points.forEach(point => {
         var y = +point.getAttribute('y');
         var x = +point.getAttribute('x');
@@ -197,7 +197,7 @@ var fallingElementsIntervalId = setInterval(() => {
 }, 500);
 document.addEventListener('keyup', onControlChange)
 
-/* Nie działa, wymaga przemyślenia */
+/* Nie działa, wymaga przemyślenia 
 function removeLifes() {
     var lifeHeadOne = document.querySelector('.life__head1');
     var lifeHeadTwo = document.querySelector('.life__head2');
@@ -216,7 +216,7 @@ function removeLifes() {
     }
 }
 removeLifes();
-
+*/
 
 function removeAllPoints() {
     const styles = document.querySelectorAll('.cell');
