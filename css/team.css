@@ -78,7 +78,7 @@
   
 .team__person--links {
     position: absolute;
-    top: 3vh;
+    top: 4vh;
     left: 120px;
     height: 15vh;
     width: 9vh;
@@ -89,8 +89,12 @@
 }
   
 .fab {
-    font-size: 7vh;
+    font-size: 6vh;
     color: white;
+}
+
+.fab:hover {
+    color: #00C8CD;
 }
 
 .fa-github::after {
