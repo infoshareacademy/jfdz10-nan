@@ -8,18 +8,17 @@ function createSaveResultButton() {
 }
 
 function playerNameForm() {
-    var playerName = document.createElement('form');
-
-    finalScoreContainer.appendChild(playerName);
-    playerName.setAttribute("action", "");
-    playerName.setAttribute("method", "post");
-    playerName.classList.add('player__name');
-
-    var inputName = document.createElement('input');
-    inputName.setAttribute("type", "text");
-    inputName.setAttribute("name", "");
-    playerName.appendChild(inputName);
+    var playerNameField = document.createElement('form');
+    finalScoreContainer.appendChild(playerNameField);
+    var playerNameInput = document.createElement('input');
+    playerNameField.appendChild(playerNameInput);
+    playerNameInput.setAttribute("id", "input");
+    playerNameInput.classList.add('player__name');
+    playerNameInput.setAttribute("type", "text");
+    playerNameInput.setAttribute("placeholder", "Wpisz swój nick");
 }
+
+
 
 function finalScore() {
     var gameResultTitle = document.createElement('p');
@@ -39,12 +38,15 @@ function finalScore() {
     createSaveResultButton();
 }
 
+
 function saveResult(target) {
     var target = event.target;
+    var input = document.getElementById('input');
     if (target.classList.contains('save__button')) {
-        saveScore({name: 'Janusz', points: score});
+        saveScore({name: input.value, points: score});
         finalScoreContainer.remove();
         generateScoresAsNodeList();
+        console.log(playerName);
     }
 }
 

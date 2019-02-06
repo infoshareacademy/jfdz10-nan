@@ -199,7 +199,7 @@ document.addEventListener('keyup', onControlChange)
 
 /* Nie działa, wymaga przemyślenia */
 function removeLifes() {
-    var lifeHeadOne = document.className.contains('life__head1');
+    var lifeHeadOne = document.querySelector('.life__head1');
     var lifeHeadTwo = document.querySelector('.life__head2');
     var lifeHeadThree = document.querySelector('.life__head3');
     if (life === 2) {

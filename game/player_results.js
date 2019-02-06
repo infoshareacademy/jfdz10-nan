@@ -54,5 +54,9 @@ function sortScoresASC(scores) {
 function getScores() {
   return JSON.parse(localStorage.getItem(LS_SCORES_KEY));
 }
+
+function getPlayerName() {
+    return localStorage.getItem
+}
 // saveScore przed generateScores(scores)
 // generateScoresAsNodeList() zawolac po game over
