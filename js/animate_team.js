@@ -1,16 +1,12 @@
 anime({
-    targets: 'img.team__photo',
+    targets: '.clip-path-container',
     translateY: [
-        {value: -1000, duration: 500},
-        {value: 0, duration: 800}
+        {value: -5000, duration: 100},
+        {value: 0, duration: 200}
     ],
-    //opacity: [
-        //{value: 0.5, duration: 500},
-        //{value: 1, duration: 800}
-    //],
-    //rotate: {
-        //value: '1turn',
-        //easing: 'easeInOutSine'
-   // },
+    opacity: [
+        {value: 0, duration: 500},
+        {value: 1, duration: 1000}
+    ],
     //delay: function (el, i, l) { return i * 1000}
 });
