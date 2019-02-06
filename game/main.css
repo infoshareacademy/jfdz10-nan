@@ -168,9 +168,7 @@ table tr td {
 
 .final__scores {
     position:absolute;
-    top: calc(50% - 159px);
-    left: calc(50% - 207px);
-    /*set margin*/
+    margin: 280px 200px;
     width: 414px;
     height: 318px;
     background: url(game_icons/yellow-board.png) no-repeat;
@@ -230,8 +228,7 @@ table tr td {
 
 .game__result {
     position:absolute;
-    top: calc(50% - 159px);
-    left: calc(50% - 207px);
+    margin: 280px 200px;
     width: 414px;
     height: 318px;
     background: url(game_icons/yellow-board.png) no-repeat;
