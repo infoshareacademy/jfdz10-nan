@@ -1,21 +1,44 @@
 #button__top {
-    display: none; 
-    position: fixed; 
-    bottom: 100px; 
-    right: 30px;
+    width: 3vh;
+    height: 3vh;
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 45%;
     z-index: 99;
     border: none; 
     outline: none;
-    background-color: rgb(0, 0, 0);
-    color: white; 
     cursor: pointer; 
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 50%;
     font-weight: bolder;
     font-size: 20px;
     box-shadow: 0px 0px 10px #ffffff;
+    background-color: rgb(0, 0, 0)
   }
   
   #button__top:hover {
-    background-color: #555;
+    background-color: rgb(36, 36, 36);
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .button__top--icon {
+    height: 20px;
+    width: auto;
+  }
+
+  @media screen and (min-width: 426px) {
+    #button__top {
+      bottom: 100px; 
+      right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    #button__top {
+      width: 5vh;
+      height: 5vh;
+    }
+
   }
