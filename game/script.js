@@ -4,7 +4,7 @@ var playBoard = document.querySelector('.play__board');
 var playButton = document.querySelector('.play__button');
 var laptopCat = document.querySelector('.laptop__cat');
 
-var controls = {    
+var controls = {
     LEFT: 37,
     RIGHT: 39,
 };
@@ -14,8 +14,7 @@ var score = 0;
 var scoreLife = document.querySelector('.life');
 var life = 3;
 
-
-window.addEventListener("click", event => {
+function startGame() {
     var target = event.target;
     var instructionText = document.createElement('p');
     var back = document.createElement('p');
@@ -27,6 +26,7 @@ window.addEventListener("click", event => {
         laptopCat.remove();
         createBoard(9, 10);
         fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
+    
 
     } if (target.classList.contains('instruction')) {
         playBoard.remove();
@@ -42,7 +42,11 @@ window.addEventListener("click", event => {
         instructionBoard.remove();
         startWindow.appendChild(playBoard);
     }
-    });
+};
+
+
+window.addEventListener("click", startGame);
+
 
 function getActiveElement() {
     return document.querySelector('.active');
@@ -71,10 +75,6 @@ function createBoard(rows, cells) {
     }
     table += '</table>';
     boardContainer.innerHTML = table;
-}
-
-function getElementBelow(tableCell) {
-
 }
 
 function generatePoints() {
@@ -108,7 +108,6 @@ function detectCollisions() {
         node.classList.remove('points')
     }
 }
-
 
 function moveRight() {
     var next = getActiveElement().nextSibling;
@@ -145,6 +144,7 @@ function onControlChange(event) {
 
 var fallingElementsIntervalId = setInterval(() => {
     var points = document.querySelectorAll(`.points`);
+    
     points.forEach(point => {
         var y = +point.getAttribute('y');
         var x = +point.getAttribute('x');
@@ -187,6 +187,8 @@ var fallingElementsIntervalId = setInterval(() => {
         if (life <= 0) {
             gameOver();
         }
+        console.log(life)
+        
     })
     detectCollisions()
 }, 500);
@@ -200,11 +202,8 @@ function removeAllPoints() {
 function gameOver() {
     clearInterval(fallingElementsGeneratorIntervalId);
     clearInterval(fallingElementsIntervalId);
-    saveScore({name: 'Janusz', points: score});
     removeActiveClass();
-    generateScoresAsNodeList();
     removeAllPoints();
+    finalScore();
 }
-
-/****************************************/
 
