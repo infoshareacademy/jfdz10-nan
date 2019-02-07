@@ -74,16 +74,8 @@ table tr td {
 
 }
 
-.life {
-    color: red;
-    font-size: 30px;
-    font-weight: 800;
-    margin: 10px 0 0 10px;
-    /*display none ustawi kotki we właściwej pozycji, ale zachowa możliwość odwoływania się do life*/
-}
-
 .life__heads {
-    margin: 10px 0 0 10px;
+    margin: 15px 0 0 10px;
 }
 
 #start__window {

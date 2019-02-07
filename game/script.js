@@ -11,8 +11,8 @@ var controls = {
 
 var scoreBoard = document.querySelector('.score');
 var score = 0;
-var scoreLife = document.querySelector('.life');
 var life = 3;
+var lifeContainer = document.querySelector('.life__heads');
 var life1 = document.querySelector('.life__head1');
 var life2 = document.querySelector('.life__head2');
 var life3 = document.querySelector('.life__head3');
@@ -185,7 +185,6 @@ var fallingElementsIntervalId = setInterval(() => {
                 life -= 1;
             }
         scoreBoard.innerText = score;
-        scoreLife.innerText = life;
         point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
 
         switch (life) {
@@ -218,6 +217,7 @@ function gameOver() {
     clearInterval(fallingElementsIntervalId);
     removeActiveClass();
     removeAllPoints();
+    lifeContainer.innerText = '';
     finalScore();
 }
 
