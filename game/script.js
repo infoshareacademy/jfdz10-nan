@@ -156,7 +156,7 @@ var fallingElementsIntervalId = setInterval(() => {
         })
 
         if (cell) {
-            isCellActive = cell.classList.contains('active');
+          var  isCellActive = cell.classList.contains('active');
             switch (kindOfPoint) {
                 case 'mouse':
                     isCellActive ? score += 3 : null;
@@ -174,12 +174,12 @@ var fallingElementsIntervalId = setInterval(() => {
                     isCellActive ? life -= 3 : null;
                     cell.classList.add('points', 'negative');
                     break;
+                }
+            }else if (point.classList.contains('negative') && !isCellActive) {
+                life *= 1;   
+            }else {
+                life -= 1;
             }
-
-
-        } else {
-            life -= 1;
-        }
         scoreBoard.innerText = score;
         scoreLife.innerText = life;
         point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
