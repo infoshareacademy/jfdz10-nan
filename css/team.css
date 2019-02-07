@@ -1,32 +1,10 @@
-/* background */
-.team{
+.team {
     background-color: #fff;
-    height: 100%;
     width: 100%;
+    margin-bottom: 7vh;
 }
 
-.teamDescription{
-    color: #324B4C;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    padding: 0 auto;
-}
-
-.teamName{
-    color: #324B4C;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.teamPhoto{
-    border-radius: 50%;
-    width: 100%;
-}
-
-.team__title{
+.team__title {
     color: #324B4C;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
@@ -34,31 +12,144 @@
     text-transform: uppercase;
 }
 
+.team__person {
+    text-align: center;
+}
+
+.team__person--name {
+    color: #324B4C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.team__person--description {
+    color: #324B4C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 auto;
+}
+
+.team__clip-path-container {
+    display: inline-block;
+    position: relative;
+    height: 22vh;
+    width: 22vh;
+    margin: 10px ;
+    padding: 3px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    overflow: hidden;  
+    border-radius: 50%;
+    border-collapse: separate; 
+    background-color: #222;
+}
+
+.team__clip-path-container:focus,
+.team__clip-path-container:active,
+.team__clip-path-container:hover {
+    border-radius: 50%;
+    outline: none;
+} 
+
+.team__person--photo {
+    height: 22vh;
+    width: 22vh;
+    background-size: cover;
+    transition: all .2s ease-in-out;
+    transform: scale(1.2); 
+    outline: none;
+    overflow: hidden;  
+    clip-path: polygon(0 100%, 0 0, 52% 0, 52% 100%);
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+}
+
+.team__clip-path-container:hover .team__person--photo {
+    clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+    transform: scale(1.1);
+}
+
+.team__clip-path-container:hover .team__person--links { 
+    left: 20px;
+    opacity: 1;
+}
+  
+.team__person--links {
+    position: absolute;
+    top: 4vh;
+    left: 120px;
+    height: 15vh;
+    width: 9vh;
+    transition: all .4s ease-in-out;
+    transition-delay: .1s;
+    opacity: 0;
+    text-align: center;
+}
+  
+.fab {
+    font-size: 6vh;
+    color: white;
+}
+
+.fab:hover {
+    color: #00C8CD;
+}
+
+.fa-github::after {
+    content: "";
+    display: block;
+    height: 1px;
+    position: relative;
+    bottom: -1px;
+    background-color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.person1 {
+    background-image: url(../fotos/team_blazej.jpg);
+    background-position: -5px 4px;
+}
+
+.person2 {
+    background-image: url(../fotos/team_magda.jpg);
+    background-position: 11px 6px;
+}
+
+.person3 {
+    background-image: url(../fotos/team_mateusz.jpg);
+    background-position: -5px 6px;
+}
+
+.person4 {
+    background-image: url(../fotos/team_owca.jpg);
+    background-position: -12px 5px;
+}
+
 /* grid setup */
-@media screen and (min-width: 426px){
+@media screen and (min-width: 426px) {
+
     .team__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 2fr);
         margin: 0 auto;
+        gap: 20px;
         max-width: 1080px;
     }
+
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 769px) {
+
     .team__wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin: 0 auto;
         max-width: 1080px;
+        gap: 20px;
+        align-content: space-around;
+        justify-content: space-between;
     }
 }
-
-
-
-
-
-
-
-
-
-
