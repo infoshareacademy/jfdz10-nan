@@ -13,6 +13,10 @@ var scoreBoard = document.querySelector('.score');
 var score = 0;
 var scoreLife = document.querySelector('.life');
 var life = 3;
+var life1 = document.querySelector('.life__head1');
+var life2 = document.querySelector('.life__head2');
+var life3 = document.querySelector('.life__head3');
+
 
 function startGame() {
     var target = event.target;
@@ -184,7 +188,17 @@ var fallingElementsIntervalId = setInterval(() => {
         scoreLife.innerText = life;
         point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
 
+            switch (life) {
+                case 2:
+                   life1.remove();
+                    break;
+                case 1:
+                    life2.remove();
+                    break;
+            }
+
         if (life <= 0) {
+            life3.remove();
             gameOver();
         }
         console.log(life)
