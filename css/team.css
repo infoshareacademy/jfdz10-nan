@@ -1,6 +1,7 @@
 .team {
     background-color: #fff;
     width: 100%;
+    margin-bottom: 7vh;
 }
 
 .team__title {
@@ -19,7 +20,7 @@
     color: #324B4C;
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
-    text-align: justify;
+    text-align: center;
     text-transform: capitalize;
 }
 
@@ -58,7 +59,7 @@
     width: 22vh;
     background-size: cover;
     transition: all .2s ease-in-out;
-    transform: scale(1.4); 
+    transform: scale(1.2); 
     outline: none;
     overflow: hidden;  
     clip-path: polygon(0 100%, 0 0, 52% 0, 52% 100%);
@@ -119,7 +120,7 @@
 
 .person3 {
     background-image: url(../fotos/team_mateusz.jpg);
-    background-position: -3px 10px;
+    background-position: -5px 6px;
 }
 
 .person4 {
