@@ -188,14 +188,14 @@ var fallingElementsIntervalId = setInterval(() => {
         scoreLife.innerText = life;
         point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
 
-            switch (life) {
-                case 2:
-                   life1.remove();
-                    break;
-                case 1:
-                    life2.remove();
-                    break;
-            }
+        switch (life) {
+            case 2:
+                life1.remove();
+                break;
+            case 1:
+                life2.remove();
+                break;
+        }
 
         if (life <= 0) {
             life3.remove();
