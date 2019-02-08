@@ -11,15 +11,19 @@ var controls = {
 
 var scoreBoard = document.querySelector('.score');
 var score = 0;
-var scoreLife = document.querySelector('.life');
 var life = 3;
+var lifeContainer = document.querySelector('.life__heads');
+var life1 = document.querySelector('.life__head1');
+var life2 = document.querySelector('.life__head2');
+var life3 = document.querySelector('.life__head3');
+
 
 function startGame() {
     var target = event.target;
     var instructionText = document.createElement('p');
     var back = document.createElement('p');
     var instructionBoard = document.createElement('div');
-    var text = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element jest inaczej punktowany: mleko 2 pkt, myszka 3 pkt. Unikaj jednak spadających bomb i kropel wody! Po złapaniu kropli kotek traci życie. Koniec gry następuje po utracie 3 żyć lub po zetknięciu z bombą. Powodzenia!";
+    var text = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element jest inaczej punktowany: woda 1 pkt, mleko 2 pkt, myszka 3 pkt. Każdy niezłapany element oznacza utratę życia. Koniec gry następuje po utracie 3 żyć lub po zetknięciu z bombą. Powodzenia!";
 
     if (target.classList.contains('play__button')) {
         startWindow.remove();
@@ -181,13 +185,23 @@ var fallingElementsIntervalId = setInterval(() => {
                 life -= 1;
             }
         scoreBoard.innerText = score;
-        scoreLife.innerText = life;
         point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
 
+        switch (life) {
+            case 2:
+                life1.remove();
+                break;
+            case 1:
+                life2.remove();
+                break;
+        }
+
         if (life <= 0) {
+            life1.remove();
+            life2.remove();
+            life3.remove();
             gameOver();
         }
-        console.log(life)
         
     })
     detectCollisions()
@@ -204,6 +218,7 @@ function gameOver() {
     clearInterval(fallingElementsIntervalId);
     removeActiveClass();
     removeAllPoints();
+    lifeContainer.innerText = '';
     finalScore();
 }
 
