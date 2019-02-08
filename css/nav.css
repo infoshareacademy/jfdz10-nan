@@ -67,7 +67,7 @@ a.active {
   border-bottom: 2px solid  rgb(158, 156, 155);
 }
 
-@media (min-width: 768px){
+@media (min-width: 426px) {
   .menu{
     height: 90px;
   }
