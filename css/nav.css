@@ -113,4 +113,14 @@ a.active {
     margin-left: 50vw;
     height: 50px;
   }
+
+  .menu, .menu__small {
+    transition: all 0.7s;
+  }
+  
+  .menu ul {
+    height: 70px;
+    transition: all 0.7s;
+  }
 }
+
