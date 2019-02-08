@@ -2,10 +2,12 @@ var scoresContainer = document.querySelector('#scores');
 var LS_SCORES_KEY = 'scores';
 
 /*czyści pole gry, ale nie zmienia wyniku na zero i nie rozpoczyna nowej gry*/
-function playAgain(target) {
+function playAgain() {
     var target = event.target;
     if(target.classList.contains('restart__button')) {
         scoresContainer.remove();
+
+        score === 0;
         startGame();
     }
 }
