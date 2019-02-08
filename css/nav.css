@@ -64,11 +64,15 @@
 }
 
 a.active {
-  border-bottom: 1px solid  #B66D49;
+  border-bottom: 2px solid  rgb(158, 156, 155);
 }
 
 @media (min-width: 768px){
   .menu{
+    height: 100px;
+  }
+
+  .menu__small{
     height: 65px;
   }
 
