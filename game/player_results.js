@@ -5,8 +5,7 @@ var LS_SCORES_KEY = 'scores';
 function playAgain(target) {
     var target = event.target;
     if(target.classList.contains('restart__button')) {
-        scoresContainer.remove();
-        startGame();
+        location.reload();       
     }
 }
 
