@@ -200,7 +200,6 @@ var fallingElementsIntervalId = setInterval(() => {
             life3.remove();
             gameOver();
         }
-        console.log(life)
         
     })
     detectCollisions()
