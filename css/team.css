@@ -128,20 +128,15 @@
     background-position: -12px 5px;
 }
 
-/* grid setup */
-@media screen and (min-width: 426px) {
-
-    .team__wrapper{
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        margin: 0 auto;
-        gap: 20px;
-        max-width: 1080px;
-    }
-
+.team__wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin: 0 auto;
+    gap: 20px;
+    max-width: 1080px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
 
     .team__wrapper{
         display: grid;
@@ -151,5 +146,11 @@
         gap: 20px;
         align-content: space-around;
         justify-content: space-between;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .team__wrapper{
+        grid-template-columns: repeat(2, 2fr);
     }
 }
