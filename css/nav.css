@@ -68,13 +68,6 @@ a.active {
 }
 
 @media (min-width: 768px){
-  .menu{
-    height: 90px;
-  }
-
-  .menu__small{
-    height: 65px;
-  }
 
   .menu__label i{
     display: none;
@@ -124,3 +117,12 @@ a.active {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .menu{
+    height: 90px;
+  }
+
+  .menu__small{
+    height: 65px;
+  }
+}
