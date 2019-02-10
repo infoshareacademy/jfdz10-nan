@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cat4you</title>
+    <link rel="stylesheet" href="css/cookies.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/hero.css">
@@ -272,7 +273,24 @@
         <img class="button__top--icon" src="icons/up-arrow.svg">
     </button>
     <script src="https://code.jquery.com/jquery-2.2.4.js"
-        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery.fn.cookiesEU({
+                text:		'Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych, reklamowych oraz funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne informacje. <a href="http://jakwylaczyccookie.pl" target="_blank" style="color: blue; font-style: italic">Dowiedz się więcej jak je wyłączyć.</a>',
+                close:		'Akceptuję',
+                position:	'top',
+                parent: jQuery('body'),
+                show_close: true,
+                use_default_css: false,
+                animation: 'slide',
+                auto_accept: false,
+                test: false,
+        });
+            });
+    </script>  
+    <script src="js/cookies.js"></script>
     <script src="js/menu_scroll.js"></script>
     <script src="js/shrinking-menu.js"></script>
     <script src="js/back-to-top.js"></script>

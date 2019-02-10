@@ -23,7 +23,7 @@ function startGame() {
     var instructionText = document.createElement('p');
     var back = document.createElement('p');
     var instructionBoard = document.createElement('div');
-    var text = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element jest inaczej punktowany: woda 1 pkt, mleko 2 pkt, myszka 3 pkt. Każdy niezłapany element oznacza utratę życia. Koniec gry następuje po utracie 3 żyć lub po zetknięciu z bombą. Powodzenia!";
+    var text = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element jest inaczej punktowany: rybka 1 pkt, mleko 2 pkt, myszka 3 pkt. Każdy niezłapany element oznacza utratę życia. Koniec gry następuje po utracie 3 żyć lub po zetknięciu z bombą. Powodzenia!";
 
     if (target.classList.contains('play__button')) {
         startWindow.remove();
