@@ -47,7 +47,6 @@ window.addEventListener("click", event => {
     }
     });
 
-
 function getActiveElement() {
     return document.querySelector('.active');
 }
