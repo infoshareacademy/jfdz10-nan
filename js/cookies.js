@@ -1,3 +1,4 @@
+//TODO: skompilowany kod ze źródła https://ciasteczka.eu/cookiesEU-latest.min.js, zmodyfikowany przez dodanie wygaszania ciasteczka po 30 dniach
 (function(jQuery) {
     jQuery.fn.extend({
       cookiesEU: function(options) {
