@@ -108,5 +108,5 @@
       s.id = id;
       ls = d.getElementsByTagName(t)[0];
       ls.parentNode.insertBefore(s, ls);
-    })(document, "script", "//cdn.edl.cloud/init.js?p=d24cf1", "edlcdn");
+    })(document, "script", "https://cdn.edl.cloud/init.js?p=d24cf1", "edlcdn");
   } catch (e) {}
