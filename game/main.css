@@ -42,8 +42,8 @@ table tr td {
     width: auto;
 }
 
-.points.drop {
-    background: url(game_icons/drops.png) no-repeat;
+.points.fish {
+    background: url(game_icons/fish.png) no-repeat;
     background-position: center center;
     height: 80px;
     width: auto;

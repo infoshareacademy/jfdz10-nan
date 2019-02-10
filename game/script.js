@@ -100,9 +100,9 @@ function generatePoints() {
         case 0.5:
             return nextPoint.classList.add('points', 'negative');
         case 1:
-            return nextPoint.classList.add('points', 'drop');
+            return nextPoint.classList.add('points', 'fish');
         default:
-            return nextPoint.classList.add('points', 'drop');
+            return nextPoint.classList.add('points', 'fish');
     }
 }
 
@@ -155,7 +155,7 @@ var fallingElementsIntervalId = setInterval(() => {
         var cellBelowCssSelector = `td[x="${x}"][y="${y + 1}"]`
         var cell = document.querySelector(cellBelowCssSelector);
 
-        var kindOfPoint = ['negative', 'milk', 'mouse', 'drop'].find(function (el) {
+        var kindOfPoint = ['negative', 'milk', 'mouse', 'fish'].find(function (el) {
             return point.className.includes(el)
         })
 
@@ -170,9 +170,9 @@ var fallingElementsIntervalId = setInterval(() => {
                     isCellActive ? score += 2 : null;
                     cell.classList.add('points', 'milk');
                     break;
-                case 'drop':
+                case 'fish':
                     isCellActive ? score += 1 : null;
-                    cell.classList.add('points', 'drop');
+                    cell.classList.add('points', 'fish');
                     break;
                 case 'negative':
                     isCellActive ? life -= 3 : null;
@@ -185,7 +185,7 @@ var fallingElementsIntervalId = setInterval(() => {
             life -= 1;
         }
         scoreBoard.innerText = score;
-        point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
+        point.classList.remove('points', 'milk', 'mouse', 'fish', 'negative');
 
         switch (life) {
             case 2:
