@@ -26,7 +26,7 @@ function startGame() {
         laptopCat.remove();
         createBoard(9, 10);
         fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
-    
+
 
     } if (target.classList.contains('instruction')) {
         playBoard.remove();
@@ -144,7 +144,7 @@ function onControlChange(event) {
 
 var fallingElementsIntervalId = setInterval(() => {
     var points = document.querySelectorAll(`.points`);
-    
+
     points.forEach(point => {
         var y = +point.getAttribute('y');
         var x = +point.getAttribute('x');
@@ -156,7 +156,7 @@ var fallingElementsIntervalId = setInterval(() => {
         })
 
         if (cell) {
-          var  isCellActive = cell.classList.contains('active');
+            var isCellActive = cell.classList.contains('active');
             switch (kindOfPoint) {
                 case 'mouse':
                     isCellActive ? score += 3 : null;
@@ -174,12 +174,12 @@ var fallingElementsIntervalId = setInterval(() => {
                     isCellActive ? life -= 3 : null;
                     cell.classList.add('points', 'negative');
                     break;
-                }
-            }else if (point.classList.contains('negative') && !isCellActive) {
-                life *= 1;   
-            }else {
-                life -= 1;
             }
+        } else if (point.classList.contains('negative') && !isCellActive) {
+            life *= 1;
+        } else {
+            life -= 1;
+        }
         scoreBoard.innerText = score;
         scoreLife.innerText = life;
         point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
@@ -187,8 +187,8 @@ var fallingElementsIntervalId = setInterval(() => {
         if (life <= 0) {
             gameOver();
         }
-        console.log(life)
-        
+
+
     })
     detectCollisions()
 }, 500);
