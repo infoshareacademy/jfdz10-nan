@@ -18,19 +18,18 @@ var life2 = document.querySelector('.life__head2');
 var life3 = document.querySelector('.life__head3');
 
 
-function startGame() {
+window.addEventListener("click", event => {
     var target = event.target;
     var instructionText = document.createElement('p');
     var back = document.createElement('p');
     var instructionBoard = document.createElement('div');
-    var text = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element jest inaczej punktowany: woda 1 pkt, mleko 2 pkt, myszka 3 pkt. Każdy niezłapany element oznacza utratę życia. Koniec gry następuje po utracie 3 żyć lub po zetknięciu z bombą. Powodzenia!";
+    var text = "Złap jak najwięcej spadających elementów poruszając się kotkiem w lewo lub prawo. Do przemieszczania kotka użyj strzałek na klawiaturze. Każdy element jest inaczej punktowany: mleko 2 pkt, myszka 3 pkt. Unikaj jednak spadających bomb i kropel wody! Po złapaniu kropli kotek traci życie. Koniec gry następuje po utracie 3 żyć lub po zetknięciu z bombą. Powodzenia!";
 
     if (target.classList.contains('play__button')) {
         startWindow.remove();
         laptopCat.remove();
         createBoard(9, 10);
         fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
-    
 
     } if (target.classList.contains('instruction')) {
         playBoard.remove();
@@ -46,10 +45,7 @@ function startGame() {
         instructionBoard.remove();
         startWindow.appendChild(playBoard);
     }
-};
-
-
-window.addEventListener("click", startGame);
+    });
 
 
 function getActiveElement() {
