@@ -30,7 +30,7 @@ function startGame() {
         laptopCat.remove();
         createBoard(9, 10);
         fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
-    
+
 
     } if (target.classList.contains('instruction')) {
         playBoard.remove();
@@ -100,9 +100,9 @@ function generatePoints() {
         case 0.5:
             return nextPoint.classList.add('points', 'negative');
         case 1:
-            return nextPoint.classList.add('points', 'drop');
+            return nextPoint.classList.add('points', 'fish');
         default:
-            return nextPoint.classList.add('points', 'drop');
+            return nextPoint.classList.add('points', 'fish');
     }
 }
 
@@ -148,19 +148,19 @@ function onControlChange(event) {
 
 var fallingElementsIntervalId = setInterval(() => {
     var points = document.querySelectorAll(`.points`);
-    
+
     points.forEach(point => {
         var y = +point.getAttribute('y');
         var x = +point.getAttribute('x');
         var cellBelowCssSelector = `td[x="${x}"][y="${y + 1}"]`
         var cell = document.querySelector(cellBelowCssSelector);
 
-        var kindOfPoint = ['negative', 'milk', 'mouse', 'drop'].find(function (el) {
+        var kindOfPoint = ['negative', 'milk', 'mouse', 'fish'].find(function (el) {
             return point.className.includes(el)
         })
 
         if (cell) {
-          var  isCellActive = cell.classList.contains('active');
+            var isCellActive = cell.classList.contains('active');
             switch (kindOfPoint) {
                 case 'mouse':
                     isCellActive ? score += 3 : null;
@@ -170,22 +170,22 @@ var fallingElementsIntervalId = setInterval(() => {
                     isCellActive ? score += 2 : null;
                     cell.classList.add('points', 'milk');
                     break;
-                case 'drop':
+                case 'fish':
                     isCellActive ? score += 1 : null;
-                    cell.classList.add('points', 'drop');
+                    cell.classList.add('points', 'fish');
                     break;
                 case 'negative':
                     isCellActive ? life -= 3 : null;
                     cell.classList.add('points', 'negative');
                     break;
-                }
-            }else if (point.classList.contains('negative') && !isCellActive) {
-                life *= 1;   
-            }else {
-                life -= 1;
             }
+        } else if (point.classList.contains('negative') && !isCellActive) {
+            life *= 1;
+        } else {
+            life -= 1;
+        }
         scoreBoard.innerText = score;
-        point.classList.remove('points', 'milk', 'mouse', 'drop', 'negative');
+        point.classList.remove('points', 'milk', 'mouse', 'fish', 'negative');
 
         switch (life) {
             case 2:
@@ -201,8 +201,7 @@ var fallingElementsIntervalId = setInterval(() => {
             life2.remove();
             life3.remove();
             gameOver();
-        }
-        
+        }   
     })
     detectCollisions()
 }, 500);

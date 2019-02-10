@@ -64,13 +64,10 @@
 }
 
 a.active {
-  border-bottom: 1px solid  #B66D49;
+  border-bottom: 2px solid  rgb(158, 156, 155);
 }
 
 @media (min-width: 768px){
-  .menu{
-    height: 65px;
-  }
 
   .menu__label i{
     display: none;
@@ -108,5 +105,24 @@ a.active {
     width: 50vw;
     margin-left: 50vw;
     height: 50px;
+  }
+
+  .menu, .menu__small {
+    transition: all 0.7s;
+  }
+  
+  .menu ul {
+    height: 70px;
+    transition: all 0.7s;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu{
+    height: 90px;
+  }
+
+  .menu__small{
+    height: 65px;
   }
 }
