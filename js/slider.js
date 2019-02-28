@@ -1,4 +1,4 @@
-window.onload = rotate;
+window.onload = nextSlide;
 
 var thisAd = 0;
 var slides = [
@@ -15,6 +15,9 @@ var slides = [
         url: "url(../fotos/cat_background3.jpg)"
     },
 ];
+
+var rotate =                   
+    setInterval(nextSlide, 7000);
 
 function nextSlide() {
     thisAd++;
@@ -36,9 +39,7 @@ function prevSlide() {
     document.getElementById("hero").style.transition = "1s";
 }
 
-function rotate() {                   
-    setTimeout(nextSlide(), 7000);
-}
+
 
 var nextButton = document.querySelector('.slider-button-next')
 nextButton.addEventListener("click", nextSlide);
