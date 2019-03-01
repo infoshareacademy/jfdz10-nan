@@ -85,12 +85,13 @@
   .hero__button {
     width: 250px;
     font-size: 1.5rem;
-    margin-left: 3vw;
+    margin-left: 0vw;
   }
 
   /* przyciski strzałek slajdu */
   .slider-button-prev,
   .slider-button-next {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;  
     position: absolute;
     left: 0;
