@@ -25,7 +25,7 @@ var slides = [
   }
 ];
 
-const activeSlide = document.querySelector(".slider-dots-element-active");
+//const activeSlide = document.querySelector(".slider-dots-element-active");
 
 var rotate = setInterval(nextSlide, 7000);
 
