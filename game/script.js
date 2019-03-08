@@ -17,6 +17,7 @@ var life1 = document.querySelector('.life__head1');
 var life2 = document.querySelector('.life__head2');
 var life3 = document.querySelector('.life__head3');
 
+var speedOfFalling = 500;
 
 function startGame() {
     var target = event.target;
@@ -201,11 +202,15 @@ var fallingElementsIntervalId = setInterval(() => {
             life2.remove();
             life3.remove();
             gameOver();
-        }   
+        }
+        
     })
     detectCollisions()
-}, 500);
+    nextLevel();
+    
+}, speedOfFalling);
 document.addEventListener('keyup', onControlChange)
+
 
 function removeAllPoints() {
     const styles = document.querySelectorAll('.cell');
