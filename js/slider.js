@@ -1,4 +1,7 @@
-window.onload = nextSlide;
+window.onload = () => {
+    nextSlide();
+    slideRotation();
+};
 
 var nextButton = document.querySelector(".slider-button-next");
 nextButton.addEventListener("click", nextSlide);
@@ -6,8 +9,10 @@ nextButton.addEventListener("click", nextSlide);
 var prevButton = document.querySelector(".slider-button-prev");
 prevButton.addEventListener("click", prevSlide);
 
+var arrowButtons = document.querySelectorAll(".slider-button");
+arrowButtons.forEach(button => {button.addEventListener("click", cancelSlideRotation)});
+
 var dots = document.querySelectorAll(".slider-dots-element");
-//dots.addEventListener("click", selectActiveSlide);
 
 var thisAd = 0;
 var slides = [
@@ -25,12 +30,13 @@ var slides = [
   }
 ];
 
-//const activeSlide = document.querySelector(".slider-dots-element-active");
+var rotate;
+function slideRotation() {
+    rotate = setInterval(nextSlide, 7000);
+}
 
-var rotate = setInterval(nextSlide, 7000);
-
-function setActiveSlide() {
-  dots.item().classList.add("slider-dots-element-active");
+function cancelSlideRotation() {
+    clearInterval(rotate);
 }
 
 function displayActiveDot() {
