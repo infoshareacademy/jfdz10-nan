@@ -4,6 +4,7 @@ var playBoard = document.querySelector('.play__board');
 var playButton = document.querySelector('.play__button');
 var laptopCat = document.querySelector('.laptop__cat');
 
+
 var controls = {
     LEFT: 37,
     RIGHT: 39,
@@ -201,7 +202,17 @@ var fallingElementsIntervalId = setInterval(() => {
             life2.remove();
             life3.remove();
             gameOver();
-        }   
+        }
+        
+        if (score >= 5) {
+            var table = document.querySelector('table');
+            clearInterval(fallingElementsGeneratorIntervalId);
+            clearInterval(fallingElementsIntervalId);
+            removeActiveClass();
+            removeAllPoints();
+            table.remove();
+            level();
+        }
     })
     detectCollisions()
 }, 500);
