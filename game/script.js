@@ -206,7 +206,7 @@ var fallingElementsIntervalId = setInterval(() => {
         
     })
     detectCollisions()
-    nextLevel();
+    checkLevel();
     
 }, speedOfFalling);
 document.addEventListener('keyup', onControlChange)
