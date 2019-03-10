@@ -93,21 +93,7 @@ function startNewLevel() {
             scoreBoard.innerText = score;
             point.classList.remove('points', 'milk', 'mouse', 'fish', 'negative');
     
-            switch (life) {
-                case 2:
-                    life1.remove();
-                    break;
-                case 1:
-                    life2.remove();
-                    break;
-            }
-    
-            if (life <= 0) {
-                life1.remove();
-                life2.remove();
-                life3.remove();
-                gameOver();
-            }
+            updateLifes()
             
         })
         detectCollisions()

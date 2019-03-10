@@ -147,6 +147,7 @@ function onControlChange(event) {
     detectCollisions()
 }
 
+
 var fallingElementsIntervalId = setInterval(() => {
     var points = document.querySelectorAll(`.points`);
 
@@ -188,21 +189,7 @@ var fallingElementsIntervalId = setInterval(() => {
         scoreBoard.innerText = score;
         point.classList.remove('points', 'milk', 'mouse', 'fish', 'negative');
 
-        switch (life) {
-            case 2:
-                life1.remove();
-                break;
-            case 1:
-                life2.remove();
-                break;
-        }
-
-        if (life <= 0) {
-            life1.remove();
-            life2.remove();
-            life3.remove();
-            gameOver();
-        }
+        updateLifes()
         
     })
     detectCollisions()
@@ -211,6 +198,23 @@ var fallingElementsIntervalId = setInterval(() => {
 }, speedOfFalling);
 document.addEventListener('keyup', onControlChange)
 
+function updateLifes() {
+    switch (life) {
+        case 2:
+            life1.remove();
+            break;
+        case 1:
+            life2.remove();
+            break;
+    }
+
+    if (life <= 0) {
+        life1.remove();
+        life2.remove();
+        life3.remove();
+        gameOver();
+    }
+}
 
 function removeAllPoints() {
     const styles = document.querySelectorAll('.cell');
