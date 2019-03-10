@@ -6,60 +6,70 @@ body {
     border-collapse: collapse;
     background: url(game_icons/board-game-bottom.png) no-repeat rgb(181, 228, 255);
     background-position: bottom;
-    background-position-y: 115%;
-    width: 820px;
-    height: 758px;
+    background-size: 100%;
+    width: 715px;
+    height: 595px;
 }
 
 table tr td {
-    width: 80px;
-    height: 80px;  
+    width: 60px;
+    height: 60px;  
 }
 
 .active {
     content: url(game_icons/kitty-basket.png);
+    background-size: 75%;
     text-align: center;
 }
 
 .points.negative {
     background: url(game_icons/bomb.png) no-repeat;
-    background-position: center center;
-    height: 80px;
-    width: auto;
+    background-position: bottom;
+    background-size: 75%;
+    height: 60px;
+    width: 60px;
 }
 
 .points.milk {
     background: url(game_icons/milk.png) no-repeat;
-    background-position: center center;
-    height: 80px;
-    width: auto;
+    background-position: bottom;
+    background-size: 45%;
+    height: 60px;
+    width: 60px;
 }
 
 .points.mouse {
     background: url(game_icons/mouse.png) no-repeat;
-    background-position: center center;
-    height: 80px;
-    width: auto;
+    background-position: bottom;
+    background-size: 75%;
+    height: 60px;
+    width: 60px;
 }
 
 .points.fish {
     background: url(game_icons/fish.png) no-repeat;
-    background-position: center center;
-    height: 80px;
-    width: auto;
+    background-position: bottom;
+    background-size: 75%;
+    height: 60px;
+    width: 60px;
 }
-
+.life__head1,
+.life__head2,
+.life__head3 {
+    width: 44px;
+}
 .menu {
     display: flex;
     justify-content: space-between; 
     background: url(game_icons/board-game-top.png) no-repeat rgb(181, 228, 255);
-    width: 820px;
-    height: 130px;
+    background-size: 100%;
+    width: 715px;
+    height: 106px;
 }
 
 .score__board {
     font-family: 'Alfa Slab One', cursive;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 800;
     margin: 10px 10px 0 0;
     color: rgb(104, 62, 56);
@@ -80,36 +90,37 @@ table tr td {
 
 #start__window {
     position:relative;
-    height: 82%;
+    height: 80%;
 }
 
 .play__board,
 .instruction__board {
     position:absolute;
-    top: calc(50% - 159px);
-    left: calc(50% - 207px);
-    width: 414px;
-    height: 318px;
+    top: calc(50% - 119px);
+    left: calc(50% - 155px);
+    width: 310px;
+    height: 238px;
     background: url(game_icons/yellow-board.png) no-repeat;
+    background-size: 100%;
     font-family: 'Alfa Slab One', cursive;
     
 }
 
 .title {
-    font-size: 50px;
+    font-size: 37.5px;
     color: rgb(104, 62, 56);
     text-align: center;
 }
 
 .play__button { 
     background-color: rgb(104, 62, 56);
-    width: 200px;
+    width: 150px;
     border: 2px solid;
     border-radius: 8px;
-    padding: 5px;
+    padding: 3px;
     margin: -2vh auto 3vh auto;
-    font-size: 34px;
-    letter-spacing: 3px;
+    font-size: 26px;
+    letter-spacing: 2px;
     color: rgb(253, 191, 43);
     text-align: center;
     text-transform: uppercase;
@@ -127,7 +138,7 @@ table tr td {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .instruction:hover,
@@ -137,19 +148,20 @@ table tr td {
 
 .laptop__cat {
     background: url(game_icons/kitty-comp.png) no-repeat;
+    background-size: 12%;
     background-position: center center;
-    height: 132px;
+    height:85px;
     width: auto;
 }
 
 .instruction__board {
-    font-size: 15px;
+    font-size: 13px;
     color: rgb(104, 62, 56);
     text-align: center;
 }
 
 .instruction__text {
-    padding-top: 30px;
+    padding-top: 22px;
 }
 
 .back {
