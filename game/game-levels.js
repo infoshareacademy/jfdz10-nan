@@ -1,12 +1,15 @@
 function nextLevel() {
-    if (score >= 20) {
+    if (score >= 10) {
         clearInterval(fallingElementsGeneratorIntervalId);
         clearInterval(fallingElementsIntervalId);
-        removeActiveClass();
         removeAllPoints();
         showLevelBoard();
     }
     
+}
+
+function removeLevelBoard() {
+    finalScoreContainer.remove()
 }
 
 function showLevelBoard() {
@@ -22,4 +25,14 @@ function showLevelBoard() {
         finalScoreContainer.appendChild(gameResult);
         gameResult.textContent = 2;
         gameResult.classList.add('game__result--score');
+        setTimeout(startNewLevel, 2000)
 }
+
+
+
+function startNewLevel() {
+    removeLevelBoard();
+    fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
+    setInterval(fallingElementsIntervalId, (speedOfFalling *2));
+}
+
