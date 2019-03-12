@@ -18,15 +18,15 @@ var thisAd = 0;
 var slides = [
   {
     name: "slide1",
-    url: "url(../fotos/cat_background.jpg)"
+    url: "url(./fotos/cat_background.jpg)"
   },
   {
     name: "slide2",
-    url: "url(../fotos/cat_background2.jpg)"
+    url: "url(./fotos/cat_background2.jpg)"
   },
   {
     name: "slide3",
-    url: "url(../fotos/cat_background3.jpg)"
+    url: "url(./fotos/cat_background3.jpg)"
   }
 ];
 
@@ -61,15 +61,19 @@ function removeRightDot() {
   rightDot.classList.remove("slider-dots-element-active");
 }
 
+function displayActiveSlide() {
+  var image = slides[thisAd];
+  document.getElementById("hero").style.backgroundImage = image.url;
+  document.getElementById("hero").style.transition = "0.5s";
+  displayActiveDot();
+}
+
 function nextSlide() {
   thisAd++;
   if (thisAd === slides.length) {
     thisAd = 0;
   }
-  var image = slides[thisAd];
-  document.getElementById("hero").style.backgroundImage = image.url;
-  document.getElementById("hero").style.transition = "1s";
-  displayActiveDot();
+  displayActiveSlide()
   removeLeftDot();
 }
 
@@ -78,9 +82,6 @@ function prevSlide() {
   if (thisAd < 0) {
     thisAd = slides.length - 1;
   }
-  var image = slides[thisAd];
-  document.getElementById("hero").style.backgroundImage = image.url;
-  document.getElementById("hero").style.transition = "1s";
-  displayActiveDot();
+  displayActiveSlide()
   removeRightDot();
 }
