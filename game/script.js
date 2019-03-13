@@ -28,7 +28,7 @@ function startGame() {
     if (target.classList.contains('play__button')) {
         startWindow.remove();
         laptopCat.remove();
-        createBoard(9, 10);
+        createBoard(8, 10);
         fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
 
 
