@@ -1,6 +1,6 @@
 window.onload = () => {
-    nextSlide();
-    slideRotation();
+  nextSlide();
+  slideRotation();
 };
 
 var nextButton = document.querySelector(".slider-button-next");
@@ -10,11 +10,13 @@ var prevButton = document.querySelector(".slider-button-prev");
 prevButton.addEventListener("click", prevSlide);
 
 var arrowButtons = document.querySelectorAll(".slider-button");
-arrowButtons.forEach(button => {button.addEventListener("click", cancelSlideRotation)});
+arrowButtons.forEach(button => {
+  button.addEventListener("click", cancelSlideRotation);
+});
 
 var dots = document.querySelectorAll(".slider-dots-element");
 
-var thisAd = 0;
+var activeSlideIndex = 0;
 var slides = [
   {
     name: "slide1",
@@ -32,19 +34,19 @@ var slides = [
 
 var rotate;
 function slideRotation() {
-    rotate = setInterval(nextSlide, 7000);
+  rotate = setInterval(nextSlide, 7000);
 }
 
 function cancelSlideRotation() {
-    clearInterval(rotate);
+  clearInterval(rotate);
 }
 
 function displayActiveDot() {
-  dots[thisAd].classList.add("slider-dots-element-active");
+  dots[activeSlideIndex].classList.add("slider-dots-element-active");
 }
 
 function removeLeftDot() {
-  var leftDot = dots[thisAd].previousElementSibling;
+  var leftDot = dots[activeSlideIndex].previousElementSibling;
   if (leftDot === null) {
     return dots[slides.length - 1].classList.remove(
       "slider-dots-element-active"
@@ -54,34 +56,34 @@ function removeLeftDot() {
 }
 
 function removeRightDot() {
-  var rightDot = dots[thisAd].nextElementSibling;
+  var rightDot = dots[activeSlideIndex].nextElementSibling;
   if (rightDot === null) {
     return dots[0].classList.remove("slider-dots-element-active");
   }
   rightDot.classList.remove("slider-dots-element-active");
 }
 
-function displayActiveSlide() {
-  var image = slides[thisAd];
+function displayactiveSlideIndex() {
+  var image = slides[activeSlideIndex];
   document.getElementById("hero").style.backgroundImage = image.url;
   document.getElementById("hero").style.transition = "0.5s";
   displayActiveDot();
 }
 
 function nextSlide() {
-  thisAd++;
-  if (thisAd === slides.length) {
-    thisAd = 0;
+  activeSlideIndex++;
+  if (activeSlideIndex === slides.length) {
+    activeSlideIndex = 0;
   }
-  displayActiveSlide()
+  displayactiveSlideIndex();
   removeLeftDot();
 }
 
 function prevSlide() {
-  thisAd--;
-  if (thisAd < 0) {
-    thisAd = slides.length - 1;
+  activeSlideIndex--;
+  if (activeSlideIndex < 0) {
+    activeSlideIndex = slides.length - 1;
   }
-  displayActiveSlide()
+  displayactiveSlideIndex();
   removeRightDot();
 }
