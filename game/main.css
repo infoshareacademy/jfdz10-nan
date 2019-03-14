@@ -7,7 +7,7 @@ body {
     background: url(game_icons/board-game-bottom.png) no-repeat rgb(181, 228, 255);
     background-position: bottom;
     background-size: 100%;
-    width: 600px;
+    width: 602px;
     height: 540px;
 }
 
@@ -17,13 +17,17 @@ table tr td {
 }
 
 .active {
-    content: url(game_icons/kitty-basket.png);
-    text-align: center;
+    background: url(game_icons/kitty-basket.png) no-repeat;
+    background-size: 95%;
+    background-position: bottom;
+    height: 60px;
+    width: 60px;
 }
 
 .points.negative {
     background: url(game_icons/bomb.png) no-repeat;
     background-position: bottom;
+    background-size: 70%;
     height: 60px;
     width: 60px;
 }
@@ -31,6 +35,7 @@ table tr td {
 .points.milk {
     background: url(game_icons/milk.png) no-repeat;
     background-position: bottom;
+    background-size: 40%;
     height: 60px;
     width: 60px;
 }
@@ -38,6 +43,7 @@ table tr td {
 .points.mouse {
     background: url(game_icons/mouse.png) no-repeat;
     background-position: bottom;
+    background-size: 75%;
     height: 60px;
     width: 60px;
 }
@@ -45,20 +51,21 @@ table tr td {
 .points.fish {
     background: url(game_icons/fish.png) no-repeat;
     background-position: bottom;
+    background-size: 75%;
     height: 60px;
     width: 60px;
 }
 .life__head1,
 .life__head2,
 .life__head3 {
-    width: 44px;
+    width: 40px;
 }
 .menu {
     display: flex;
     justify-content: space-between; 
     background: url(game_icons/board-game-top.png) no-repeat rgb(181, 228, 255);
     background-size: 100%;
-    width: 600px;
+    width: 602px;
     height: 126px;
 }
 
@@ -177,25 +184,26 @@ table tr td {
 }
 
 .final__scores--title {
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: underline;
 }
 
 .final__scores--list {
+    font-size: 15px;
     text-align: left;
     list-style-type: none;
 }
 
 .restart__button { 
     background-color: rgb(54, 133, 1);
-    width: 350px;
+    width: 230px;
     border: 2px solid rgb(44, 109, 1);
     box-shadow: 0px 2px 5px 0px rgb(6, 77, 41);
     border-radius: 8px;
-    padding: 5px;
-    margin: 15px auto 3vh auto;
-    font-size: 24px;
-    letter-spacing: 3px;
+    padding: 3px;
+    margin: -2px auto 3vh auto;
+    font-size: 18px;
+    letter-spacing: 2px;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
