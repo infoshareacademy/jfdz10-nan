@@ -55,11 +55,13 @@ table tr td {
     height: 60px;
     width: 60px;
 }
+
 .life__head1,
 .life__head2,
 .life__head3 {
     width: 40px;
 }
+
 .menu {
     display: flex;
     justify-content: space-between; 
@@ -105,7 +107,6 @@ table tr td {
     background: url(game_icons/yellow-board.png) no-repeat;
     background-size: 100%;
     font-family: 'Alfa Slab One', cursive;
-    
 }
 
 .title {
@@ -134,7 +135,6 @@ table tr td {
     box-shadow: 2px 2px 5px 0px rgb(202, 173, 10);
     transition: .2s;
 }
-
 
 .instruction {
     font-family: Arial, Helvetica, sans-serif;
@@ -225,7 +225,6 @@ table tr td {
     text-transform: uppercase;
     font-family: 'Alfa Slab One', cursive;
 }
-
 
 .restart__button:hover, .save__button:hover {
     cursor: pointer;
