@@ -1,104 +1,66 @@
-var level = 1
+var level = 1;
+var newSpeedOFfFalling;
+
 function checkLevel() {
-    if(score >= 2 && score < 5) {
-        level+=1
+    if (level === 3) {
+        return; //nic nie robimy
     }
-    if(score >= 5 && score < 7) {
-        level+=2
+
+    var previousLevel = level;
+
+    if (level === 1 && score >= 5) {
+        level = 2
+    } else if (level === 2 && score >= 10) {
+        level = 3
     }
-    console.log(level)
-    nextLevel()
+
+    if(previousLevel !== level) {
+        nextLevel();
+    }
 }
-console.log(level)
 
 function nextLevel() {
-    if (level === 2) {
-        clearInterval(fallingElementsGeneratorIntervalId);
-        clearInterval(fallingElementsIntervalId);
-        showLevelBoard();
-        removeAllPoints();
-    }
-    if (level === 3) {
-        clearInterval(fallingElementsGeneratorIntervalId);
-        clearInterval(fallingElementsIntervalId);
-        showLevelBoard();
-        removeAllPoints();
-    }
+    clearInterval(fallingElementsGeneratorIntervalId);
+    clearInterval(fallingElementsIntervalId);
+    showLevelBoard();
+    removeAllPoints();
 }
 
 function removeLevelBoard() {
-    finalScoreContainer.remove()
+    finalScoreContainer.classList.remove('game__result');
+    while (finalScoreContainer.firstChild) {
+        finalScoreContainer.removeChild(finalScoreContainer.firstChild);
+    };
 }
 
 function showLevelBoard() {
-        var gameResultTitle = document.createElement('p');
-        var gameResult = document.createElement('p');
-        
-        finalScoreContainer.classList.add('game__result');
-    
-        finalScoreContainer.appendChild(gameResultTitle);
-        gameResultTitle.textContent = "Poziom";
-        gameResultTitle.classList.add('game__result--title')
-        
-        finalScoreContainer.appendChild(gameResult);
-        gameResult.textContent = level;
-        gameResult.classList.add('game__result--score');
-        setTimeout(startNewLevel, 2000)
+    console.log('lol')
+    var gameResultTitle = document.createElement('p');
+    var gameResult = document.createElement('p');
+
+    finalScoreContainer.classList.add('game__result');
+
+    finalScoreContainer.appendChild(gameResultTitle);
+    gameResultTitle.textContent = "Poziom";
+    gameResultTitle.classList.add('game__result--title')
+
+    finalScoreContainer.appendChild(gameResult);
+    gameResult.textContent = level;
+    gameResult.classList.add('game__result--score');
+    setTimeout(startNewLevel, 2000)
 }
-
-
 
 function startNewLevel() {
     removeLevelBoard();
+
+    if (level === 1) {
+        return;
+    }
+
+
     createBoard(9, 10);
-    speedOfFalling = speedOfFalling / level
+    newSpeedOFfFalling = speedOfFalling / level;
     fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500)
-    fallingElementsIntervalId = setInterval(() => {
-        var points = document.querySelectorAll(`.points`);
-        points.forEach(point => {
-            var y = +point.getAttribute('y');
-            var x = +point.getAttribute('x');
-            var cellBelowCssSelector = `td[x="${x}"][y="${y + 1}"]`
-            var cell = document.querySelector(cellBelowCssSelector);
-    
-            var kindOfPoint = ['negative', 'milk', 'mouse', 'fish'].find(function (el) {
-                return point.className.includes(el)
-            })
-    
-            if (cell) {
-                var isCellActive = cell.classList.contains('active');
-                switch (kindOfPoint) {
-                    case 'mouse':
-                        isCellActive ? score += 3 : null;
-                        cell.classList.add('points', 'mouse');
-                        break;
-                    case 'milk':
-                        isCellActive ? score += 2 : null;
-                        cell.classList.add('points', 'milk');
-                        break;
-                    case 'fish':
-                        isCellActive ? score += 1 : null;
-                        cell.classList.add('points', 'fish');
-                        break;
-                    case 'negative':
-                        isCellActive ? life -= 3 : null;
-                        cell.classList.add('points', 'negative');
-                        break;
-                }
-            } else if (point.classList.contains('negative') && !isCellActive) {
-                life *= 1;
-            } else {
-                life -= 1;
-            }
-            scoreBoard.innerText = score;
-            point.classList.remove('points', 'milk', 'mouse', 'fish', 'negative');
-    
-            updateLifes()
-            
-        })
-        detectCollisions()
-        
-    }, speedOfFalling);
-    
+    fallingElementsIntervalId = setInterval(fallingElements, newSpeedOFfFalling);
 }
 
