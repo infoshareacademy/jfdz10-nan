@@ -34,7 +34,6 @@ function removeLevelBoard() {
 }
 
 function showLevelBoard() {
-    console.log('lol')
     var gameResultTitle = document.createElement('p');
     var gameResult = document.createElement('p');
 
