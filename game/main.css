@@ -6,60 +6,74 @@ body {
     border-collapse: collapse;
     background: url(game_icons/board-game-bottom.png) no-repeat rgb(181, 228, 255);
     background-position: bottom;
-    background-position-y: 115%;
-    width: 820px;
-    height: 758px;
+    background-size: 100%;
+    width: 602px;
+    height: 540px;
 }
 
 table tr td {
-    width: 80px;
-    height: 80px;  
+    width: 60px;
+    height: 60px;  
 }
 
 .active {
-    content: url(game_icons/kitty-basket.png);
-    text-align: center;
+    background: url(game_icons/kitty-basket.png) no-repeat;
+    background-size: 95%;
+    background-position: bottom;
+    height: 60px;
+    width: 60px;
 }
 
 .points.negative {
     background: url(game_icons/bomb.png) no-repeat;
-    background-position: center center;
-    height: 80px;
-    width: auto;
+    background-position: bottom;
+    background-size: 70%;
+    height: 60px;
+    width: 60px;
 }
 
 .points.milk {
     background: url(game_icons/milk.png) no-repeat;
-    background-position: center center;
-    height: 80px;
-    width: auto;
+    background-position: bottom;
+    background-size: 40%;
+    height: 60px;
+    width: 60px;
 }
 
 .points.mouse {
     background: url(game_icons/mouse.png) no-repeat;
-    background-position: center center;
-    height: 80px;
-    width: auto;
+    background-position: bottom;
+    background-size: 75%;
+    height: 60px;
+    width: 60px;
 }
 
 .points.fish {
     background: url(game_icons/fish.png) no-repeat;
-    background-position: center center;
-    height: 80px;
-    width: auto;
+    background-position: bottom;
+    background-size: 75%;
+    height: 60px;
+    width: 60px;
+}
+
+.life__head1,
+.life__head2,
+.life__head3 {
+    width: 40px;
 }
 
 .menu {
     display: flex;
     justify-content: space-between; 
     background: url(game_icons/board-game-top.png) no-repeat rgb(181, 228, 255);
-    width: 820px;
-    height: 130px;
+    background-size: 100%;
+    width: 602px;
+    height: 126px;
 }
 
 .score__board {
     font-family: 'Alfa Slab One', cursive;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 800;
     margin: 10px 10px 0 0;
     color: rgb(104, 62, 56);
@@ -80,36 +94,36 @@ table tr td {
 
 #start__window {
     position:relative;
-    height: 82%;
+    height: 81%;
 }
 
 .play__board,
 .instruction__board {
     position:absolute;
-    top: calc(50% - 159px);
-    left: calc(50% - 207px);
-    width: 414px;
-    height: 318px;
+    top: calc(50% - 119px);
+    left: calc(50% - 155px);
+    width: 310px;
+    height: 238px;
     background: url(game_icons/yellow-board.png) no-repeat;
+    background-size: 100%;
     font-family: 'Alfa Slab One', cursive;
-    
 }
 
 .title {
-    font-size: 50px;
+    font-size: 37.5px;
     color: rgb(104, 62, 56);
     text-align: center;
 }
 
 .play__button { 
     background-color: rgb(104, 62, 56);
-    width: 200px;
+    width: 150px;
     border: 2px solid;
     border-radius: 8px;
-    padding: 5px;
+    padding: 3px;
     margin: -2vh auto 3vh auto;
-    font-size: 34px;
-    letter-spacing: 3px;
+    font-size: 26px;
+    letter-spacing: 2px;
     color: rgb(253, 191, 43);
     text-align: center;
     text-transform: uppercase;
@@ -122,12 +136,11 @@ table tr td {
     transition: .2s;
 }
 
-
 .instruction {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .instruction:hover,
@@ -137,19 +150,20 @@ table tr td {
 
 .laptop__cat {
     background: url(game_icons/kitty-comp.png) no-repeat;
+    background-size: 12%;
     background-position: center center;
-    height: 132px;
+    height:85px;
     width: auto;
 }
 
 .instruction__board {
-    font-size: 15px;
+    font-size: 13px;
     color: rgb(104, 62, 56);
     text-align: center;
 }
 
 .instruction__text {
-    padding-top: 30px;
+    padding-top: 22px;
 }
 
 .back {
@@ -160,34 +174,36 @@ table tr td {
 
 .final__scores {
     position:absolute;
-    margin: 280px 200px;
-    width: 414px;
-    height: 318px;
+    margin: 214px 145px;
+    width: 310px;
+    height: 238px;
     background: url(game_icons/yellow-board.png) no-repeat;
+    background-size: 100%;
     font-family: 'Alfa Slab One', cursive;
     text-align: center;
 }
 
 .final__scores--title {
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: underline;
 }
 
 .final__scores--list {
+    font-size: 15px;
     text-align: left;
     list-style-type: none;
 }
 
 .restart__button { 
     background-color: rgb(54, 133, 1);
-    width: 350px;
+    width: 230px;
     border: 2px solid rgb(44, 109, 1);
     box-shadow: 0px 2px 5px 0px rgb(6, 77, 41);
     border-radius: 8px;
-    padding: 5px;
-    margin: 15px auto 3vh auto;
-    font-size: 24px;
-    letter-spacing: 3px;
+    padding: 3px;
+    margin: -2px auto 3vh auto;
+    font-size: 18px;
+    letter-spacing: 2px;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -196,20 +212,19 @@ table tr td {
 
 .save__button {
     background-color: rgb(54, 133, 1);
-    width: 250px;
+    width: 220px;
     border: 2px solid rgb(44, 109, 1);
     box-shadow: 0px 2px 5px 0px rgb(6, 77, 41);
     border-radius: 8px;
-    padding: 5px;
-    margin: 15px auto 3vh auto;
-    font-size: 24px;
+    padding: 3px;
+    margin: 10px auto 3vh auto;
+    font-size: 18px;
     letter-spacing: 3px;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Alfa Slab One', cursive;
 }
-
 
 .restart__button:hover, .save__button:hover {
     cursor: pointer;
@@ -220,33 +235,188 @@ table tr td {
 
 .game__result {
     position:absolute;
-    margin: 280px 200px;
-    width: 414px;
-    height: 318px;
+    margin: 214px 145px;
+    width: 310px;
+    height: 238px;
     background: url(game_icons/yellow-board.png) no-repeat;
+    background-size: 100%;
     font-family: 'Alfa Slab One', cursive;
     text-align: center;
 }
 
 .game__result--title {
-    font-size: 38px;
-    margin: 20px;
+    font-size: 28px;
+    margin: 15px;
 }
 
 .game__result--score {
-    font-size: 60px;
-    margin: 10px 0 0 0;
+    font-size: 45px;
+    margin: 8px 0 0 0;
 }
 
 .player__name {
     background-color: rgb(255, 255, 255);
-    width: 250px;
+    width: 220px;
     border: 2px solid rgb(165, 165, 165);;
     border-radius: 8px;
-    padding: 5px;
-    margin: 15px auto 0 auto;
-    font-size: 24px;
+    padding: 3px;
+    margin: 10px auto 0 auto;
+    font-size: 18px;
     color: rgb(95, 95, 95);
     text-align: center;
     box-shadow: inset 0 0 10px rgb(189, 189, 189);
+}
+
+@media screen and (min-width: 1440px) {
+
+    #board__container {
+        background-size: none;
+        width: 820px;
+        height: 758px;
+    }
+    
+    table tr td {
+        width: 80px;
+        height: 86px;  
+    }
+    
+    .active {
+        content: url(game_icons/kitty-basket.png);
+        text-align: center;
+        background: none;
+        height: 86px;
+        width: 80px;
+    }
+    
+    .points.negative {
+        height: 86px;
+        width: auto;
+    }
+    
+    .points.milk {
+        height: 86px;
+        width: auto;
+    }
+    
+    .points.mouse {
+        height: 86px;
+        width: auto;
+    }
+    
+    .points.fish {
+        height: 86px;
+        width: auto;
+    }
+    
+    .life__head1,
+    .life__head2,
+    .life__head3 {
+        width: auto;
+    }
+
+    .menu {
+        width: 820px;
+        height: 130px;
+    }
+    
+    .score__board {
+        font-size: 30px;
+    }
+    
+    #start__window {
+        height: 82%;
+    }
+    
+    .play__board,
+    .instruction__board {
+        position:absolute;
+        top: calc(50% - 159px);
+        left: calc(50% - 207px);
+        width: 414px;
+        height: 318px;
+        background-size: none;
+    }
+    
+    .title {
+        font-size: 50px;
+    }
+    
+    .play__button { 
+        width: 200px;
+        padding: 5px;
+        font-size: 34px;
+        letter-spacing: 3px;
+    }
+    
+    .instruction {
+        font-size: 30px;
+    }
+    
+    .instruction:hover,
+    .back:hover {
+        cursor: pointer;
+    }
+    
+    .laptop__cat {
+        height: 106px;
+    }
+    
+    .instruction__board {
+        font-size: 15px;
+    }
+    
+    .instruction__text {
+        padding-top: 30px;
+    }
+    
+    .final__scores {
+        margin: 280px 200px;
+        width: 414px;
+        height: 318px;
+        background-size: none;
+    }
+    
+    .final__scores--title {
+        font-size: 20px;
+    }
+   
+    .restart__button { 
+        width: 350px;
+        padding: 5px;
+        margin: 15px auto 3vh auto;
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+    
+    .save__button {
+        width: 250px;
+        padding: 5px;
+        margin: 15px auto 3vh auto;
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+    
+    .game__result {
+        margin: 280px 200px;
+        width: 414px;
+        height: 318px;
+        background-size: none;
+    }
+    
+    .game__result--title {
+        font-size: 38px;
+        margin: 20px;
+    }
+    
+    .game__result--score {
+        font-size: 60px;
+        margin: 10px 0 0 0;
+    }
+    
+    .player__name {
+        width: 250px;
+        padding: 5px;
+        margin: 15px auto 0 auto;
+        font-size: 24px;
+    }
 }
