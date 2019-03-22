@@ -1,5 +1,5 @@
 var level = 1;
-var newSpeedOFfFalling;
+var newSpeedOffFalling;
 var newSpeedOfGeneratingPoints;
 
 function checkLevel() {
@@ -22,6 +22,7 @@ function nextLevel() {
     clearInterval(fallingElementsIntervalId);
     showLevelBoard();
     removeAllPoints();
+    
 }
 
 function removeLevelBoard() {
@@ -44,6 +45,10 @@ function showLevelBoard() {
     finalScoreContainer.appendChild(gameResult);
     gameResult.textContent = level;
     gameResult.classList.add('level');
+
+    backgroundMusic.pause();
+    
+    
     setTimeout(startNewLevel, 2000)
 }
 
@@ -54,11 +59,13 @@ function startNewLevel() {
         return;
     }
 
+    backgroundMusic.play();
+    backgroundMusic.playbackRate = (level * 0.6);
 
     createBoard(8, 10);
-    newSpeedOFfFalling = speedOfFalling / level;
+    newSpeedOffFalling = speedOfFalling / level;
     newSpeedOfGeneratingPoints = speedOfGeneratingPoints - (level * 100);
     fallingElementsGeneratorIntervalId = setInterval(generatePoints, newSpeedOfGeneratingPoints);
-    fallingElementsIntervalId = setInterval(fallingElements, newSpeedOFfFalling);
+    fallingElementsIntervalId = setInterval(fallingElements, newSpeedOffFalling);
 }
 
