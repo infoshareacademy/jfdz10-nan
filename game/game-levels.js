@@ -2,9 +2,6 @@ var level = 1;
 var newSpeedOFfFalling;
 
 function checkLevel() {
-    if (level === 3) {
-        return; //nic nie robimy
-    }
 
     var previousLevel = level;
 
@@ -41,11 +38,11 @@ function showLevelBoard() {
 
     finalScoreContainer.appendChild(gameResultTitle);
     gameResultTitle.textContent = "Poziom";
-    gameResultTitle.classList.add('game__result--title')
+    gameResultTitle.classList.add('title')
 
     finalScoreContainer.appendChild(gameResult);
     gameResult.textContent = level;
-    gameResult.classList.add('game__result--score');
+    gameResult.classList.add('level');
     setTimeout(startNewLevel, 2000)
 }
 
@@ -57,7 +54,7 @@ function startNewLevel() {
     }
 
 
-    createBoard(9, 10);
+    createBoard(8, 10);
     newSpeedOFfFalling = speedOfFalling / level;
     fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500)
     fallingElementsIntervalId = setInterval(fallingElements, newSpeedOFfFalling);
