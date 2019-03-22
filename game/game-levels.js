@@ -10,7 +10,7 @@ function checkLevel() {
 
     if (level === 1 && score >= 5) {
         level = 2
-    } else if (level === 2 && score >= 10) {
+    } else if (level === 2 && score >= 15) {
         level = 3
     }
 
