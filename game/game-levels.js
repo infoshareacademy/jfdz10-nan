@@ -5,7 +5,7 @@ function checkLevel() {
 
     var previousLevel = level;
 
-    if (level === 1 && score >= 5) {
+    if (level === 1 && score >= 7) {
         level = 2
     } else if (level === 2 && score >= 15) {
         level = 3

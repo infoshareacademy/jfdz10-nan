@@ -33,8 +33,10 @@ function startGame() {
         startWindow.remove();
         laptopCat.remove();
         createBoard(8, 10);
-        fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
-        fallingElementsIntervalId = setInterval(fallingElements, speedOfFalling);
+        
+        setTimeout(() => (fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500)), 2000);
+        setTimeout(() => (fallingElementsIntervalId = setInterval(fallingElements, speedOfFalling)), 2000);
+        
         showLevelBoard();
     }
 
