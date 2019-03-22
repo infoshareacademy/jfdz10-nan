@@ -267,6 +267,12 @@ table tr td {
     box-shadow: inset 0 0 10px rgb(189, 189, 189);
 }
 
+.level {
+    font-size: 53.5px;
+    color: rgb(104, 62, 56);
+    text-align: center;
+}
+
 @media screen and (min-width: 1440px) {
 
     #board__container {
@@ -418,5 +424,9 @@ table tr td {
         padding: 5px;
         margin: 15px auto 0 auto;
         font-size: 24px;
+    }
+
+    .level {
+        font-size: 60px;
     }
 }

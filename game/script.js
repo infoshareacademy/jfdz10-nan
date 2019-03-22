@@ -17,6 +17,11 @@ var life1 = document.querySelector('.life__head1');
 var life2 = document.querySelector('.life__head2');
 var life3 = document.querySelector('.life__head3');
 
+var speedOfFalling = 500;
+var speedOfGeneratingPoints = 1500;
+var fallingElementsGeneratorIntervalId;
+var fallingElementsIntervalId;
+
 
 function startGame() {
     var target = event.target;
@@ -29,10 +34,14 @@ function startGame() {
         startWindow.remove();
         laptopCat.remove();
         createBoard(8, 10);
-        fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
+        
+        setTimeout(() => (fallingElementsGeneratorIntervalId = setInterval(generatePoints, speedOfGeneratingPoints)), 2000);
+        setTimeout(() => (fallingElementsIntervalId = setInterval(fallingElements, speedOfFalling)), 2000);
+        
+        showLevelBoard();
+    }
 
-
-    } if (target.classList.contains('instruction')) {
+    if (target.classList.contains('instruction')) {
         playBoard.remove();
         startWindow.appendChild(instructionBoard);
         instructionBoard.classList.add('instruction__board');
@@ -42,7 +51,9 @@ function startGame() {
         instructionBoard.appendChild(back);
         back.classList.add("back");
         back.textContent = "Powrót";
-    } if (target.classList.contains('back')) {
+    }
+
+    if (target.classList.contains('back')) {
         instructionBoard.remove();
         startWindow.appendChild(playBoard);
     }
@@ -141,12 +152,11 @@ function onControlChange(event) {
         case controls.RIGHT:
             moveRight();
             break;
-
     }
-    detectCollisions()
 }
 
-var fallingElementsIntervalId = setInterval(() => {
+
+function fallingElements() {
     var points = document.querySelectorAll(`.points`);
 
     points.forEach(point => {
@@ -179,33 +189,40 @@ var fallingElementsIntervalId = setInterval(() => {
                     cell.classList.add('points', 'negative');
                     break;
             }
+            checkLevel();
         } else if (point.classList.contains('negative') && !isCellActive) {
             life *= 1;
         } else {
             life -= 1;
         }
+
         scoreBoard.innerText = score;
         point.classList.remove('points', 'milk', 'mouse', 'fish', 'negative');
 
-        switch (life) {
-            case 2:
-                life1.remove();
-                break;
-            case 1:
-                life2.remove();
-                break;
-        }
-
-        if (life <= 0) {
-            life1.remove();
-            life2.remove();
-            life3.remove();
-            gameOver();
-        }   
+        updateLifes()
     })
     detectCollisions()
-}, 500);
+}
+
 document.addEventListener('keyup', onControlChange)
+
+function updateLifes() {
+    switch (life) {
+        case 2:
+            life1.remove();
+            break;
+        case 1:
+            life2.remove();
+            break;
+    }
+
+    if (life <= 0) {
+        life1.remove();
+        life2.remove();
+        life3.remove();
+        gameOver();
+    }
+}
 
 function removeAllPoints() {
     const styles = document.querySelectorAll('.cell');
