@@ -1,5 +1,6 @@
 var level = 1;
 var newSpeedOFfFalling;
+var newSpeedOfGeneratingPoints;
 
 function checkLevel() {
 
@@ -56,7 +57,8 @@ function startNewLevel() {
 
     createBoard(8, 10);
     newSpeedOFfFalling = speedOfFalling / level;
-    fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500)
+    newSpeedOfGeneratingPoints = speedOfGeneratingPoints - (level * 100);
+    fallingElementsGeneratorIntervalId = setInterval(generatePoints, newSpeedOfGeneratingPoints);
     fallingElementsIntervalId = setInterval(fallingElements, newSpeedOFfFalling);
 }
 

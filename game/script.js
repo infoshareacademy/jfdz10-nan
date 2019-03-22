@@ -18,6 +18,7 @@ var life2 = document.querySelector('.life__head2');
 var life3 = document.querySelector('.life__head3');
 
 var speedOfFalling = 500;
+var speedOfGeneratingPoints = 1500;
 var fallingElementsGeneratorIntervalId;
 var fallingElementsIntervalId;
 
@@ -34,7 +35,7 @@ function startGame() {
         laptopCat.remove();
         createBoard(8, 10);
         
-        setTimeout(() => (fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500)), 2000);
+        setTimeout(() => (fallingElementsGeneratorIntervalId = setInterval(generatePoints, speedOfGeneratingPoints)), 2000);
         setTimeout(() => (fallingElementsIntervalId = setInterval(fallingElements, speedOfFalling)), 2000);
         
         showLevelBoard();
