@@ -1,5 +1,5 @@
 var level = 1;
-var newSpeedOFfFalling;
+var newSpeedOffFalling;
 var newSpeedOfGeneratingPoints;
 
 function checkLevel() {
@@ -63,9 +63,9 @@ function startNewLevel() {
     backgroundMusic.playbackRate = (level * 0.6);
 
     createBoard(8, 10);
-    newSpeedOFfFalling = speedOfFalling / level;
+    newSpeedOffFalling = speedOfFalling / level;
     newSpeedOfGeneratingPoints = speedOfGeneratingPoints - (level * 100);
     fallingElementsGeneratorIntervalId = setInterval(generatePoints, newSpeedOfGeneratingPoints);
-    fallingElementsIntervalId = setInterval(fallingElements, newSpeedOFfFalling);
+    fallingElementsIntervalId = setInterval(fallingElements, newSpeedOffFalling);
 }
 
