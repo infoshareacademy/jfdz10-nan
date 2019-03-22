@@ -21,6 +21,7 @@ var speedOfFalling = 500;
 var fallingElementsGeneratorIntervalId;
 var fallingElementsIntervalId;
 
+var backgroundMusic = new Audio('music/background-music.mp3');
 
 function startGame() {
     var target = event.target;
@@ -36,6 +37,8 @@ function startGame() {
         fallingElementsGeneratorIntervalId = setInterval(generatePoints, 1500);
         fallingElementsIntervalId = setInterval(fallingElements, speedOfFalling);
         showLevelBoard();
+        backgroundMusic.play();
+        backgroundMusic.loop = true;
     }
 
     if (target.classList.contains('instruction')) {
@@ -227,11 +230,14 @@ function removeAllPoints() {
 }
 
 function gameOver() {
+    var gameOverSound = new Audio('music/game-over.mp3');
     clearInterval(fallingElementsGeneratorIntervalId);
     clearInterval(fallingElementsIntervalId);
     removeActiveClass();
     removeAllPoints();
     lifeContainer.innerText = '';
     finalScore();
+    backgroundMusic.pause();
+    gameOverSound.play();
 }
 
